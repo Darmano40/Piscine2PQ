@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -337,6 +337,48 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114431313660964696, guid: 159a8a6df2472cf498ef0d841f1bdfa2,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 53bc6471f1be106458076a163f4f4197,
+        type: 3}
+    - target: {fileID: 114431313660964696, guid: 159a8a6df2472cf498ef0d841f1bdfa2,
+        type: 2}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114157073295740222, guid: 159a8a6df2472cf498ef0d841f1bdfa2,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 77851e6844f79374c87f114e27093a94,
+        type: 3}
+    - target: {fileID: 114157073295740222, guid: 159a8a6df2472cf498ef0d841f1bdfa2,
+        type: 2}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224006496560342668, guid: 159a8a6df2472cf498ef0d841f1bdfa2,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -130.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 224006496560342668, guid: 159a8a6df2472cf498ef0d841f1bdfa2,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 228.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 224006496560342668, guid: 159a8a6df2472cf498ef0d841f1bdfa2,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 10.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 224006496560342668, guid: 159a8a6df2472cf498ef0d841f1bdfa2,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 271.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 159a8a6df2472cf498ef0d841f1bdfa2, type: 2}
