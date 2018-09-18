@@ -6,9 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager_Sarbacane : MonoBehaviour {
     public int Return;
     public int Level_End;
-    public UIManager UIManager_Sarbacane;
-    public SoundManager SoundManager_Sarbacane;
-
+    public static GameManager_Sarbacane Singleton;
         private void Awake()
     {
         if (Singleton != null)
