@@ -22,7 +22,7 @@ public class UIManager_Main_Menu : MonoBehaviour {
     {
         if (Input.GetMouseButtonDown(0))
         {
-            if (isSplashScreenOn)
+            if (isSplashScreenOn && SceneManager.GetActiveScene().name == "Main_Menu")
             {
                 isSplashScreenOn = false;
                 MoveToMainMenu();
@@ -42,33 +42,33 @@ public class UIManager_Main_Menu : MonoBehaviour {
         mainMenu.gameObject.SetActive(true);
     }
 
-    private void LoadMiniGameSelection()
+    public void LoadMiniGameSelection()
     {
         SceneManager.LoadScene("Select_Level");
     }
 
-    private void LoadExit()
+    public void LoadExit()
     {
         Debug.Log("You quit !");
         Application.Quit();
     }
 
-    private void LoadPQ()
+    public void LoadPQ()
     {
         SceneManager.LoadScene("PQ");
     }
 
-    private void LoadBasket()
+    public void LoadBasket()
     {
         SceneManager.LoadScene("Basket");
     }
 
-    private void LoadSarbacane()
+    public void LoadSarbacane()
     {
         SceneManager.LoadScene("Sarbacane");
     }
 
-    private void LoadDrague()
+    public void LoadDrague()
     {
         SceneManager.LoadScene("Drague");
     }
