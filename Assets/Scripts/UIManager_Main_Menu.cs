@@ -44,7 +44,7 @@ public class UIManager_Main_Menu : MonoBehaviour {
 
     public void LoadMiniGameSelection()
     {
-        SceneManager.LoadScene("Select_Level");
+        SceneManager.LoadScene("Level_Selection");
     }
 
     public void LoadExit()
@@ -71,5 +71,10 @@ public class UIManager_Main_Menu : MonoBehaviour {
     public void LoadDrague()
     {
         SceneManager.LoadScene("Drague");
+    }
+
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadScene("Main_Menu");
     }
 }
