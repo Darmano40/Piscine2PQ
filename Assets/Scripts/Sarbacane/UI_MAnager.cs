@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class UI_MAnager : MonoBehaviour {
 
     public int time;   //actual time
+    public float t;
     public Text TimerText;    //time wrote in a text in the canvas
     private float startTime;  //strting time
 
@@ -22,7 +23,7 @@ public class UI_MAnager : MonoBehaviour {
 	void Update () {
 
         timeDown();
-        if (Input.anyKeyDown)
+        if (Input.anyKeyDown && t >= 0f)
         {
             Scoring();
         }
@@ -31,15 +32,22 @@ public class UI_MAnager : MonoBehaviour {
 
     void timeDown()    
     {
-        float t = startTime - Time.time; ;
+        t = startTime - Time.time; ;
 
         string minutes = ((int)t / 60).ToString();
         string seconds = (t % 60).ToString("f2");
-        if (time <= 0)
+        if (t >= 0f)
         {
-
+            TimerText.text = minutes + ":" + seconds;
+            
         }
-        TimerText.text = minutes + ":" + seconds;
+
+        else
+        {
+            Time.timeScale = 0;
+            TimerText.text = "0:0.00";
+        }
+        
 
     }
 
@@ -47,13 +55,13 @@ public class UI_MAnager : MonoBehaviour {
     {
 
         scoreValue += 10;
-        score.text = "Score " + scoreValue;
+        score.text = "" + scoreValue;
     }
 
     void timer_barre_down ()
     {
         Time_Barre.fillAmount = ((startTime -Time.time) / startTime);
-        Debug.Log(Time_Barre.fillAmount);
+        //Debug.Log(Time_Barre.fillAmount);
         //Debug.Log(Time.time);
 
     }
