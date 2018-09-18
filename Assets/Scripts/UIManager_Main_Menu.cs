@@ -2,48 +2,51 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class UIManager_Main_Menu : MonoBehaviour {
 
     public float imageSpeed, screenSpeed;
 
     private bool isSplashScreenOn;
-    private Transform fond, splashScreen, mainMenu;
+    private GameObject fond, splashScreen, mainMenu;
 
     private void Awake()
     {
         if (SceneManager.GetActiveScene().name == "Main_Menu")
         {
             isSplashScreenOn = true;
-            fond = transform.GetChild(0);
-            splashScreen = transform.GetChild(1);
-            mainMenu = transform.GetChild(2);
+            fond = transform.GetChild(0).gameObject;
+            splashScreen = transform.GetChild(1).gameObject;
+            mainMenu = transform.GetChild(2).gameObject;
         }
 
     }
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (SceneManager.GetActiveScene().name == "Main_Menu")
         {
-            if (isSplashScreenOn && SceneManager.GetActiveScene().name == "Main_Menu")
-            {
+            if (Input.GetMouseButtonDown(0) && isSplashScreenOn)
                 isSplashScreenOn = false;
-                MoveToMainMenu();
+
+            if (!isSplashScreenOn)
+            {
+                mainMenu.transform.GetChild(0).GetComponent<Button>().interactable = true;
+                mainMenu.transform.GetChild(1).GetComponent<Button>().interactable = true;
+
+                if (mainMenu.GetComponent<RectTransform>().position.y < 400)
+                {
+                    mainMenu.GetComponent<RectTransform>().transform.Translate(Vector3.up * screenSpeed * Time.deltaTime);
+                    splashScreen.GetComponent<RectTransform>().transform.Translate(Vector3.up * screenSpeed * Time.deltaTime);
+                    mainMenu.transform.GetChild(0).GetComponent<Button>().interactable = false;
+                    mainMenu.transform.GetChild(1).GetComponent<Button>().interactable = false;
+                }
+
+                if (fond.GetComponent<RectTransform>().position.y < 550)
+                    fond.GetComponent<RectTransform>().transform.Translate(Vector3.up * imageSpeed * Time.deltaTime);
             }
         }
-    }
-
-    private void MoveToMainMenu()
-    {
-        /*
-        fond.Translate(Vector3.up * imageSpeed * Time.deltaTime, Camera.main.transform);
-        splashScreen.Translate(Vector3.up * screenSpeed * Time.deltaTime, Camera.main.transform);
-        mainMenu.Translate(Vector3.up * screenSpeed * Time.deltaTime, Camera.main.transform);
-        */
-
-        splashScreen.gameObject.SetActive(false);
-        mainMenu.gameObject.SetActive(true);
     }
 
     public void LoadMiniGameSelection()
