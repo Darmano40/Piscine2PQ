@@ -12,10 +12,14 @@ public class UIManager_Main_Menu : MonoBehaviour {
 
     private void Awake()
     {
-        isSplashScreenOn = true;
-        fond = transform.GetChild(0);
-        splashScreen = transform.GetChild(1);
-        mainMenu = transform.GetChild(2);
+        if (SceneManager.GetActiveScene().name == "Main_Menu")
+        {
+            isSplashScreenOn = true;
+            fond = transform.GetChild(0);
+            splashScreen = transform.GetChild(1);
+            mainMenu = transform.GetChild(2);
+        }
+
     }
 
     private void Update()
