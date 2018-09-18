@@ -13,6 +13,8 @@ public class UIManager_Main_Menu : MonoBehaviour {
 
     private void Awake()
     {
+        Screen.orientation = ScreenOrientation.Landscape;
+
         if (SceneManager.GetActiveScene().name == "Main_Menu")
         {
             isSplashScreenOn = true;
