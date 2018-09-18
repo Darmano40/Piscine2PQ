@@ -11,8 +11,7 @@ public class Sound_Manager_Basket : MonoBehaviour
     public static Sound_Manager_Basket instance = null;     //Allows other scripts to call functions from SoundManager.             
     public float lowPitchRange = .95f;              //The lowest a sound effect will be randomly pitched.
     public float highPitchRange = 1.05f;    //The highest a sound effect will be randomly pitched.
-    public AudioClip Basket_OK;
-    public AudioClip Basket_Fail;
+
 
 
     void Awake()
