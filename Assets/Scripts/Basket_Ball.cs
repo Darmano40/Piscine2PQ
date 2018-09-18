@@ -5,15 +5,18 @@ using UnityEngine;
 
 public class Basket_Ball : MonoBehaviour{
 
-    private Vector2 origTrans;
+    private Vector2 Respawn_Ball;
     public AudioClip Basket_OK;
     public AudioClip Basket_Fail;
+    public GameObject img_win;
+    public GameObject img_Loose;
+
 
 
     void Start()
     {
 
-        origTrans = transform.position;
+        Respawn_Ball = transform.position;
 
     }
 
@@ -21,14 +24,17 @@ public class Basket_Ball : MonoBehaviour{
     {
         if (collision.gameObject.tag == "Basket_Trash")
         {
+            img_win.SetActive(true);
             Sound_Manager_Basket.instance.RandomizeSfx(Basket_OK);
-            transform.position = origTrans;
+            transform.position = Respawn_Ball;
             GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                
+
         }
         else if (collision.gameObject.tag == "Basket_Ground")
         {
             Sound_Manager_Basket.instance.RandomizeSfx(Basket_Fail);
-            transform.position = origTrans;
+            transform.position = Respawn_Ball;
             GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         }
 
