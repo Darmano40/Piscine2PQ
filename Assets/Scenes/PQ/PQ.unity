@@ -180,7 +180,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Back to main menu
+  m_Text: Back to selection menu
 --- !u!222 &128050730
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -512,7 +512,7 @@ GameObject:
   - component: {fileID: 2057344093}
   - component: {fileID: 2057344092}
   m_Layer: 5
-  m_Name: BackToMainMenu
+  m_Name: BackToSelectionMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -577,7 +577,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1704734116}
-        m_MethodName: LoadMainMenu
+        m_MethodName: LoadMiniGameSelection
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
