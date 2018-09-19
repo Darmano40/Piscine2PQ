@@ -15,6 +15,8 @@ public class UI_MAnager : MonoBehaviour {
 
     public Image Time_Barre;  //timer sprite
 
+    public GameObject Endgame_Button, Timer_Button;
+
     // Use this for initialization
     void Start () {
         startTime = time;
@@ -37,7 +39,7 @@ public class UI_MAnager : MonoBehaviour {
         t = startTime - Time.time; ;
 
         string minutes = ((int)t / 60).ToString();
-        string seconds = (t % 60).ToString("f2");
+        string seconds = (t % 60).ToString("f0");
         if (t >= 0f)
         {
             TimerText.text = minutes + ":" + seconds;
@@ -47,7 +49,9 @@ public class UI_MAnager : MonoBehaviour {
         else
         {
             Time.timeScale = 0;
-            TimerText.text = "0:0.00";
+            TimerText.text = "0:0";
+            Endgame_Button.SetActive(true);
+            Timer_Button.SetActive(false);
         }
         
 
