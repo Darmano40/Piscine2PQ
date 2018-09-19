@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 657ac5bc0665b634581479e3def75460, type: 3}
+  m_Name: LootItem_PowerUp
+  m_EditorClassIdentifier: 
+  lootName: PowerUp
+  lootPrefab: {fileID: 100000, guid: c8f7d8f5a7cb712499728cfcd1d45c28, type: 3}
+  lootType: 1
