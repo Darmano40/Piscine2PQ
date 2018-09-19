@@ -34,3 +34,5 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+Assets/Scenes/Drague/Drague_tuto.unity
+ProjectSettings/TagManager.asset
