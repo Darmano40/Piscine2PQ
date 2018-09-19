@@ -58,7 +58,7 @@ public class GameManager_Sarbacane : MonoBehaviour
         {
             Nmb_Projectile_Cible1--;
             Debug.Log("Cible 1: " + Nmb_Projectile_Cible1);
-            if(Nmb_Projectile_Cible1 == 0 )
+            if(Nmb_Projectile_Cible1 <= 0 )
             {
                 Debug.Log("Cible 1 Retourné");
                 
