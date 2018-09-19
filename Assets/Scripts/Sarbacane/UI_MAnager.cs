@@ -16,7 +16,7 @@ public class UI_MAnager : MonoBehaviour {
 
     public Image Time_Barre;  //timer sprite
 
-    public GameObject Endgame_Button, Timer_Button;
+    public GameObject Endgame_Button, Timer_Button, Pause_Button;
 
     public GameManager_Sarbacane _my_GM;
     
@@ -57,6 +57,7 @@ public class UI_MAnager : MonoBehaviour {
             TimerText.text = "0:0";
             Endgame_Button.SetActive(true);
             Timer_Button.SetActive(false);
+            Pause_Button.SetActive(false);
         }
         
 

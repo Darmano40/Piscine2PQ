@@ -39,6 +39,7 @@ public class GameManager_Sarbacane : MonoBehaviour
         if (Number_Projectile_Cible1 <= 0)
         {
             Angry_Cible1.SetActive(true);
+            /*
             timeLeft_Cible1 = startTime_Cible1 - Time.time;
             if(timeLeft_Cible1 <= 0)
             {
@@ -49,6 +50,7 @@ public class GameManager_Sarbacane : MonoBehaviour
                 Debug.Log("Cible 1 en colère");
                 // Afficher bulle de dialogue
             }
+            */
         }
         if (Number_Projectile_Cible2 <= 0)
         {
