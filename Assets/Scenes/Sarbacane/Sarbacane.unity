@@ -514,6 +514,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pause_Buttons: {fileID: 827184601}
+  my_UIM: {fileID: 1814428374}
+  my_GM: {fileID: 0}
 --- !u!1 &201535022
 GameObject:
   m_ObjectHideFlags: 0
