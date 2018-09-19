@@ -41,7 +41,7 @@ public class UI_MAnager : MonoBehaviour {
 
     void timeDown()    
     {
-        t = startTime - Time.time; ;
+        t = startTime - Time.time;
 
         string minutes = ((int)t / 60).ToString();
         string seconds = (t % 60).ToString("f0");
@@ -65,7 +65,7 @@ public class UI_MAnager : MonoBehaviour {
 
     public void CanScoring()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && t >= 0f)
+        if (t >= 0f)
         {
             Scoring();
             _my_GM.DicreaseProjectiles();
