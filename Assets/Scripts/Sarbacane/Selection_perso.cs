@@ -1,11 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
-public class GameManager_Sarbacane : MonoBehaviour
-{
+public class Selection_perso : MonoBehaviour {
     public GameObject Sarbacane_West;
     public GameObject Sarbacane_North_West;
     public GameObject Sarbacane_North_East;
@@ -17,38 +14,26 @@ public class GameManager_Sarbacane : MonoBehaviour
     public UI_MAnager UI_Man;
 
     public int startTime_Cible1, startTime_Cible2, startTime_Cible3, startTime_Cible4;
-    private float timeLeft_Cible1, timeLeft_Cible2, timeLeft_Cible3, timeLeft_Cible4;
+    private int timeLeft_Cible1, timeLeft_Cible2, timeLeft_Cible3, timeLeft_Cible4;
 
     // Use this for initialization
-    void Start()
-    {
+    void Start () {
         Number_Projectile_Cible1 = Random.Range(5, 10);
         Number_Projectile_Cible2 = Random.Range(5, 10);
         Number_Projectile_Cible3 = Random.Range(5, 10);
         Number_Projectile_Cible4 = Random.Range(5, 10);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Sarbacane_East.activeSelf || Sarbacane_North_East.activeSelf || Sarbacane_North_West.activeSelf || Sarbacane_West.activeSelf)
+	
+	// Update is called once per frame
+	void Update () {
+		 if (Sarbacane_East.activeSelf || Sarbacane_North_East.activeSelf || Sarbacane_North_West.activeSelf || Sarbacane_West.activeSelf)
         {
             UI_Man.CanScoring();
         }
 
-        if (Number_Projectile_Cible1 <= 0)
+         if(Number_Projectile_Cible1 <= 0)
         {
             Angry_Cible1.SetActive(true);
-            timeLeft_Cible1 = startTime_Cible1 - Time.time;
-            if(timeLeft_Cible1 <= 0)
-            {
-                Angry_Cible1.SetActive(false);
-            }
-            else if(timeLeft_Cible1 >= 0 && Input.GetKeyDown(KeyCode.Space))
-            {
-                Debug.Log("Cible 1 en colère");
-                // Afficher bulle de dialogue
-            }
         }
         if (Number_Projectile_Cible2 <= 0)
         {
@@ -63,7 +48,7 @@ public class GameManager_Sarbacane : MonoBehaviour
             Angry_Cible4.SetActive(true);
         }
 
-
+        
     }
 
     public void Cibles1()
@@ -73,7 +58,7 @@ public class GameManager_Sarbacane : MonoBehaviour
         Sarbacane_North_East.SetActive(false);
         Sarbacane_North_West.SetActive(false);
 
-
+        
     }
 
     public void Cibles2()
@@ -98,7 +83,7 @@ public class GameManager_Sarbacane : MonoBehaviour
         Sarbacane_West.SetActive(true);
         Sarbacane_North_East.SetActive(false);
         Sarbacane_North_West.SetActive(false);
-
+        
     }
 
 
@@ -128,6 +113,5 @@ public class GameManager_Sarbacane : MonoBehaviour
             Debug.Log("cible4: " + Number_Projectile_Cible4);
         }
     }
-
 
 }

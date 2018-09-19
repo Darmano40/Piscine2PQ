@@ -9,7 +9,8 @@ public class UI_MAnager : MonoBehaviour {
     public Text TimerText;    //time wrote in a text in the canvas
     private float startTime;  //strting time
 
-    public int scoreValue = 0;   //start score
+    public int ActualScore;
+    public int AddScore;
     public Text score;    //displayed score
     public Outline scoreOutline; //score outline
 
@@ -17,6 +18,8 @@ public class UI_MAnager : MonoBehaviour {
 
     public GameObject Endgame_Button, Timer_Button;
 
+    public GameManager_Sarbacane _my_GM;
+    
     // Use this for initialization
     void Start () {
         startTime = time;
@@ -26,10 +29,12 @@ public class UI_MAnager : MonoBehaviour {
 	void Update () {
 
         timeDown();
+        /*
         if (Input.anyKeyDown && t >= 0f)
         {
             Scoring();
         }
+        */
         timer_barre_down();
         ReSizing();
 	}
@@ -57,60 +62,70 @@ public class UI_MAnager : MonoBehaviour {
 
     }
 
+    public void CanScoring()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && t >= 0f)
+        {
+            Scoring();
+            _my_GM.DicreaseProjectiles();
+        }
+
+    }
+
     void Scoring()
     {
 
-        scoreValue += 10;
-        score.text = "" + scoreValue;
+        ActualScore += AddScore;
+        score.text = "" + ActualScore;
     }
 
     void ReSizing()
     {
-        if (scoreValue < 20)
+        if (ActualScore < 20)
         {
             score.color = Color.black;
             score.fontSize = 95;
         }
 
-        else if (scoreValue < 50)
+        else if (ActualScore < 50)
         {
             score.color = Color.grey;
-            score.fontSize = 130;
+            score.fontSize = 110;
             scoreOutline.effectColor = Color.white;
         }
 
-        else if (scoreValue < 70)
+        else if (ActualScore < 70)
         {
             score.color = Color.white;
-            score.fontSize = 150;
+            score.fontSize = 130;
             scoreOutline.effectColor = Color.black;
         }
 
-        else if (scoreValue < 90)
+        else if (ActualScore < 90)
         {
             score.color = Color.blue;
-            score.fontSize = 180;
+            score.fontSize = 150;
             scoreOutline.effectColor = Color.cyan;
         }
 
-        else if (scoreValue < 120)
+        else if (ActualScore < 120)
         {
             score.color = Color.green;
-            score.fontSize = 210;
+            score.fontSize = 180;
             scoreOutline.effectColor = Color.yellow;
         }
 
-        else if (scoreValue < 150)
+        else if (ActualScore < 150)
         {
             score.color = Color.magenta;
-            score.fontSize = 250;
+            score.fontSize = 200;
             scoreOutline.effectColor = Color.red;
         }
 
-        else if (scoreValue < 200)
+        else if (ActualScore < 200)
         {
             score.color = Color.red;
-            score.fontSize = 290;
+            score.fontSize = 220;
             scoreOutline.effectColor = Color.black;
         }
     }
