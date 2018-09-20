@@ -8,6 +8,7 @@ public class UI_MAnager : MonoBehaviour {
     public float t;
     public Text TimerText;    //time wrote in a text in the canvas
     private float startTime;  //strting time
+    public int LooseTime;
 
     public int ActualScore;
     public int AddScore;
@@ -19,6 +20,7 @@ public class UI_MAnager : MonoBehaviour {
     public GameObject Endgame_Button, Timer_Button, Pause_Button;
 
     public GameManager_Sarbacane _my_GM;
+    
     
     // Use this for initialization
     void Start () {
@@ -70,12 +72,10 @@ public class UI_MAnager : MonoBehaviour {
             Scoring();
             _my_GM.DicreaseProjectiles();
         }
-
     }
 
     void Scoring()
     {
-
         ActualScore += AddScore;
         score.text = "" + ActualScore;
     }
@@ -137,5 +137,10 @@ public class UI_MAnager : MonoBehaviour {
         //Debug.Log(Time_Barre.fillAmount);
         //Debug.Log(Time.time);
 
+    }
+
+    public void DicreaseTime()
+    {
+        startTime -= LooseTime;
     }
 }
