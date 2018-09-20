@@ -15,6 +15,7 @@ public class GameManager_Sarbacane : MonoBehaviour
     public GameObject Calm_Cible1, Calm_Cible2, Calm_Cible3, Calm_Cible4;
     public GameObject BD_Cible1, BD_Cible2, BD_Cible3, BD_Cible4;
 
+
     private int Number_Projectile_Cible1, Number_Projectile_Cible2, Number_Projectile_Cible3, Number_Projectile_Cible4;
     public UI_MAnager UI_Man;
 
@@ -26,55 +27,107 @@ public class GameManager_Sarbacane : MonoBehaviour
 
     public Button ShootButton;
 
+    public int Minimum_Projectile_Range = 5, Maximum_Projectile_Range = 10;
+
     // Use this for initialization
     void Start()
     {
-        Number_Projectile_Cible1 = Random.Range(5, 10);
-        Number_Projectile_Cible2 = Random.Range(5, 10);
-        Number_Projectile_Cible3 = Random.Range(5, 10);
-        Number_Projectile_Cible4 = Random.Range(5, 10);
+        Number_Projectile_Cible1 = Random.Range(Minimum_Projectile_Range, Maximum_Projectile_Range);
+        Number_Projectile_Cible2 = Random.Range(Minimum_Projectile_Range, Maximum_Projectile_Range);
+        Number_Projectile_Cible3 = Random.Range(Minimum_Projectile_Range, Maximum_Projectile_Range);
+        Number_Projectile_Cible4 = Random.Range(Minimum_Projectile_Range, Maximum_Projectile_Range);
 
-        startTime_Cible1 = timer_cible1;
+        timeLeft_Cible1 = timer_cible1 * 60;
+        timeLeft_Cible2 = timer_cible2 * 60;
+        timeLeft_Cible3 = timer_cible3 * 60;
+        timeLeft_Cible4 = timer_cible4 * 60;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Sarbacane_East.activeSelf || Sarbacane_North_East.activeSelf || Sarbacane_North_West.activeSelf || Sarbacane_West.activeSelf)
-        {
-            //UI_Man.CanScoring();
-        }
 
         if (Number_Projectile_Cible1 <= 0)
         {
             Angry_Cible1.SetActive(true);
             Calm_Cible1.SetActive(false);
-            timeLeft_Cible1 = startTime_Cible1 - Time.time;
-            Debug.Log("timeleft_cible1: " + timeLeft_Cible1);
+            timeLeft_Cible1--;
             if(timeLeft_Cible1 <= 0f && !Cible1_Returned)
             {
-                ResetNumberProjectiles();
                 UI_Man.AddBonusScore();
+                ResetNumberProjectilesCibles1();
             }
             else if(timeLeft_Cible1 >= 0f && Input.GetMouseButtonDown(0))
             {
                 Cible1_Returned = true;
-                // Afficher bulle de dialogue
                 BD_Cible1.SetActive(true);
                 UI_Man.DicreaseTime();
+                Sarbacane_East.SetActive(false);
+                timeLeft_Cible1 = -0.1f;
             }
         }
         if (Number_Projectile_Cible2 <= 0)
         {
             Angry_Cible2.SetActive(true);
+            Calm_Cible2.SetActive(false);
+            timeLeft_Cible2--;
+            if (timeLeft_Cible2 <= 0f && !Cible2_Returned)
+            {
+                UI_Man.AddBonusScore();
+                ResetNumberProjectilesCibles2();
+            }
+            else if (timeLeft_Cible2 >= 0f && Input.GetMouseButtonDown(0))
+            {
+                Cible2_Returned = true;
+                BD_Cible2.SetActive(true);
+                UI_Man.DicreaseTime();
+                Sarbacane_North_East.SetActive(false);
+                timeLeft_Cible2 = -0.1f;
+            }
         }
         if (Number_Projectile_Cible3 <= 0)
         {
             Angry_Cible3.SetActive(true);
+            Calm_Cible3.SetActive(false);
+            timeLeft_Cible3--;
+            if (timeLeft_Cible3 <= 0f && !Cible3_Returned)
+            {
+                UI_Man.AddBonusScore();
+                ResetNumberProjectilesCibles3();
+            }
+            else if (timeLeft_Cible3 >= 0f && Input.GetMouseButtonDown(0))
+            {
+                Cible3_Returned = true;
+                BD_Cible3.SetActive(true);
+                UI_Man.DicreaseTime();
+                Sarbacane_North_West.SetActive(false);
+                timeLeft_Cible3 = -0.1f;
+
+            }
         }
         if (Number_Projectile_Cible4 <= 0)
         {
             Angry_Cible4.SetActive(true);
+            Calm_Cible4.SetActive(false);
+            timeLeft_Cible4--;
+            if (timeLeft_Cible4 <= 0f && !Cible4_Returned)
+            {
+                UI_Man.AddBonusScore();
+                ResetNumberProjectilesCibles4();
+            }
+            else if (timeLeft_Cible4 >= 0f && Input.GetMouseButtonDown(0))
+            {
+                Cible4_Returned = true;
+                BD_Cible4.SetActive(true);
+                UI_Man.DicreaseTime();
+                Sarbacane_West.SetActive(false);
+                timeLeft_Cible4 = -0.1f;
+            }
+        }
+
+        if(BD_Cible1.activeSelf && BD_Cible2.activeSelf && BD_Cible3.activeSelf && BD_Cible4.activeSelf)
+        {
+            UI_Man.Timeout();
         }
 
 
@@ -145,14 +198,44 @@ public class GameManager_Sarbacane : MonoBehaviour
     }
 
 
-    public void ResetNumberProjectiles()
+    public void ResetNumberProjectilesCibles1()
     {
-        startTime_Cible1 = timer_cible1;
-        timeLeft_Cible1 = 0f;
+        
+        timeLeft_Cible1 = timer_cible1 * 60;
         Angry_Cible1.SetActive(false);
         Calm_Cible1.SetActive(true);
-        Number_Projectile_Cible1 = Random.Range(5, 10);
+        Number_Projectile_Cible1 = Random.Range(Minimum_Projectile_Range, Maximum_Projectile_Range);
         Debug.Log("cible1 reset: " + Number_Projectile_Cible1);
+    }
+
+    public void ResetNumberProjectilesCibles2()
+    {
+
+        timeLeft_Cible2 = timer_cible2 * 60;
+        Angry_Cible2.SetActive(false);
+        Calm_Cible2.SetActive(true);
+        Number_Projectile_Cible2 = Random.Range(Minimum_Projectile_Range, Maximum_Projectile_Range);
+        Debug.Log("cible1 reset: " + Number_Projectile_Cible2);
+    }
+
+    public void ResetNumberProjectilesCibles3()
+    {
+
+        timeLeft_Cible3 = timer_cible3 * 60;
+        Angry_Cible3.SetActive(false);
+        Calm_Cible3.SetActive(true);
+        Number_Projectile_Cible3 = Random.Range(Minimum_Projectile_Range, Maximum_Projectile_Range);
+        Debug.Log("cible1 reset: " + Number_Projectile_Cible3);
+    }
+
+    public void ResetNumberProjectilesCibles4()
+    {
+
+        timeLeft_Cible4 = timer_cible4 * 60;
+        Angry_Cible4.SetActive(false);
+        Calm_Cible4.SetActive(true);
+        Number_Projectile_Cible4 = Random.Range(Minimum_Projectile_Range, Maximum_Projectile_Range);
+        Debug.Log("cible1 reset: " + Number_Projectile_Cible4);
     }
 
 

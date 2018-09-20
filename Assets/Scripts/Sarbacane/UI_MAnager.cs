@@ -8,7 +8,7 @@ public class UI_MAnager : MonoBehaviour {
     public float t;
     public Text TimerText;    //time wrote in a text in the canvas
     private float startTime;  //strting time
-    public int LooseTime;
+    public float LooseTime;
 
     public int ActualScore;
     public int AddScore;
@@ -30,7 +30,6 @@ public class UI_MAnager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
         timeDown();
         /*
         if (Input.anyKeyDown && t >= 0f)
@@ -51,16 +50,11 @@ public class UI_MAnager : MonoBehaviour {
         if (t >= 0f)
         {
             TimerText.text = minutes + ":" + seconds;
-            
         }
 
         else
         {
-            Time.timeScale = 0;
-            TimerText.text = "0:0";
-            Endgame_Button.SetActive(true);
-            Timer_Button.SetActive(false);
-            Pause_Button.SetActive(false);
+            Timeout();
         }
         
 
@@ -68,6 +62,7 @@ public class UI_MAnager : MonoBehaviour {
 
     public void CanScoring()
     {
+        if(_my_GM.Sarbacane_East.activeSelf || _my_GM.Sarbacane_North_East.activeSelf || _my_GM.Sarbacane_North_West.activeSelf || _my_GM.Sarbacane_West.activeSelf)
         if (t >= 0f)
         {
             Scoring();
@@ -134,7 +129,7 @@ public class UI_MAnager : MonoBehaviour {
 
     void timer_barre_down ()
     {
-        Time_Barre.fillAmount = ((startTime -Time.time) / startTime);
+        Time_Barre.fillAmount = ((t) / startTime);
         //Debug.Log(Time_Barre.fillAmount);
         //Debug.Log(Time.time);
 
@@ -143,10 +138,20 @@ public class UI_MAnager : MonoBehaviour {
     public void DicreaseTime()
     {
         startTime -= LooseTime;
+        Debug.Log("decrease time");
     }
 
     public void AddBonusScore()
     {
         ActualScore += BonusScore;
+    }
+
+    public void Timeout()
+    {
+        Time.timeScale = 0;
+        TimerText.text = "0:0";
+        Endgame_Button.SetActive(true);
+        Timer_Button.SetActive(false);
+        Pause_Button.SetActive(false);
     }
 }

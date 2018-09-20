@@ -9,6 +9,7 @@ public class PauseManager : MonoBehaviour {
     public UI_MAnager my_UIM;
     public GameManager_Sarbacane my_GM;
     private Scene actualScene;
+    public GameObject End_Buttons;
 
 	// Use this for initialization
 	void Start () {
@@ -34,13 +35,11 @@ public class PauseManager : MonoBehaviour {
 
     public void Retry()
     {
-        /*
         Time.timeScale = 1;
         my_UIM.ActualScore = 0;
         my_UIM.time = 120;
-        my_GM.
         Pause_Buttons.SetActive(false);
-        */
+        End_Buttons.SetActive(false);
     }
 
     public void Menu()
