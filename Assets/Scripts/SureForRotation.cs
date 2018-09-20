@@ -11,7 +11,7 @@ public class SureForRotation : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        if (SceneManager.GetActiveScene().name == "Drague_02" || SceneManager.GetActiveScene().name == "PQ")
+        if ((SceneManager.GetActiveScene().buildIndex >=3 && SceneManager.GetActiveScene().buildIndex <= 5) || (SceneManager.GetActiveScene().buildIndex >= 7 && SceneManager.GetActiveScene().buildIndex <= 8))
         {
             Screen.orientation = ScreenOrientation.Portrait;
         }
