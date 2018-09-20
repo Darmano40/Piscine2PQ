@@ -34,7 +34,7 @@ public class Basket_Ball : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.E)&& Launched == false) {
+        if (Input.GetTouch(0).phase == TouchPhase.Began && Launched == false) {
             Launched = true;
             GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
             Sound_Manager_Basket.instance.RandomizeSfx(Basket_throw);

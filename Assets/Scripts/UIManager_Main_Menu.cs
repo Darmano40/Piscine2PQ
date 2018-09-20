@@ -69,7 +69,7 @@ public class UIManager_Main_Menu : MonoBehaviour {
 
     public void LoadBasket()
     {
-        SceneManager.LoadScene("Basket");
+        SceneManager.LoadScene("Basket_Axel_Build");
     }
 
     public void LoadSarbacane()
@@ -79,7 +79,7 @@ public class UIManager_Main_Menu : MonoBehaviour {
 
     public void LoadDrague()
     {
-        SceneManager.LoadScene("Drague");
+        SceneManager.LoadScene("Drague_02");
     }
 
     public void LoadMainMenu()

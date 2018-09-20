@@ -5,22 +5,46 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Main_Menu/Main_Menu.unity
-    guid: e7997fd4113ffff46bcea5aa35dd0a5b
+    guid: a3eac8c7a3f60874880e8b427f795dc3
   - enabled: 1
     path: Assets/Scenes/Main_Menu/Level_Selection.unity
-    guid: 7d6a2cc3304604f42a47881aaded89f7
+    guid: ba9a72c54884141468b59781fe205337
+  - enabled: 0
+    path: Assets/Scenes/Basket/Basket_Axel.unity
+    guid: 30c531a382753d245839b2bc4c8b4de9
   - enabled: 1
-    path: Assets/Scenes/Basket/Basket.unity
-    guid: 4b34cd19b4597a640bd3d1d967fd1a1c
+    path: Assets/Scenes/Basket/Basket_Axel_Build.unity
+    guid: b02d62d836f65c647a5fbae2d494b822
   - enabled: 1
-    path: Assets/Scenes/Sarbacane/Sarbacane.unity
-    guid: 47984feecc5865e45bdf270976af0275
-  - enabled: 1
-    path: Assets/Scenes/Drague/Drague.unity
-    guid: 99a759f7fd4cf21438ffd1dd8c827770
+    path: Assets/Scenes/Drague/Drague_02.unity
+    guid: 6781877280e49ea48acd192f8a4fbf05
   - enabled: 1
     path: Assets/Scenes/PQ/PQ.unity
-    guid: 59f045303c53c5e46bd55c10e404963c
+    guid: d0cbdb468f57584478e3ef517e549a6a
+  - enabled: 1
+    path: Assets/Scenes/Sarbacane/Sarbacane.unity
+    guid: 3e582ac6d3860c5489ded843ec22eb67
+  - enabled: 1
+    path: Assets/Scenes/Lootbox/Lootbox.unity
+    guid: d7c72db3bfd49b442823cfcf835cb091
   m_configObjects: {}
