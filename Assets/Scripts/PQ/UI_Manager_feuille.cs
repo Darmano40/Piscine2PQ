@@ -9,6 +9,8 @@ public class UI_Manager_feuille : MonoBehaviour
     public Image roll;
     public Image leaf;
 
+    public GameObject Feuille_Decrochee;
+
     public float draggedleaf = 0.2f;
     public float leafState = 0.2f;
     public float filledLeaf = 1.2f;
@@ -26,24 +28,25 @@ public class UI_Manager_feuille : MonoBehaviour
         if (Input.GetKeyDown("z"))
         {
             RollOnce();
+            Feuille_Decrochee.transform.Translate(0.0f, -6.5f, 0.0f);
         }
-	}
+    }
 
     public void RollOnce()
     {
+        
         leafState += draggedleaf;
-        if (EntireLeaf())
+        if (leafState >= filledLeaf)
         {
+            Feuille_Decrochee.SetActive(true);
             // Décrocher la feuille avec "tear"
             tearedLeaves++;
+            leafState = 0.0f;
         }
         UpdateLeafDisplay();
     }
 
-    public bool EntireLeaf()
-    {
-        return (leafState >= filledLeaf);
-    }
+
 
     public void UpdateLeafDisplay()
     {
