@@ -67,7 +67,7 @@ public class UI_MAnager : MonoBehaviour {
         if(_my_GM.Sarbacane_East.activeSelf || _my_GM.Sarbacane_North_East.activeSelf || _my_GM.Sarbacane_North_West.activeSelf || _my_GM.Sarbacane_West.activeSelf)
         if (t >= 0f)
         {
-            
+            my_SM.Impact_Cible();
             Scoring();
             _my_GM.DicreaseProjectiles();
         }
@@ -146,6 +146,7 @@ public class UI_MAnager : MonoBehaviour {
 
     public void AddBonusScore()
     {
+        my_SM.Bonus_Sarbacane();
         ActualScore += BonusScore;
     }
 
