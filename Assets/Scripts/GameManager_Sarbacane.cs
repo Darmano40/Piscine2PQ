@@ -54,6 +54,7 @@ public class GameManager_Sarbacane : MonoBehaviour
             if(timeLeft_Cible1 <= 0f && !Cible1_Returned)
             {
                 ResetNumberProjectiles();
+                UI_Man.AddBonusScore();
             }
             else if(timeLeft_Cible1 >= 0f && Input.GetMouseButtonDown(0))
             {
@@ -146,12 +147,12 @@ public class GameManager_Sarbacane : MonoBehaviour
 
     public void ResetNumberProjectiles()
     {
+        startTime_Cible1 = timer_cible1;
+        timeLeft_Cible1 = 0f;
         Angry_Cible1.SetActive(false);
         Calm_Cible1.SetActive(true);
         Number_Projectile_Cible1 = Random.Range(5, 10);
         Debug.Log("cible1 reset: " + Number_Projectile_Cible1);
-        startTime_Cible1 = timer_cible1;
-        timeLeft_Cible1 = 0f;
     }
 
 
