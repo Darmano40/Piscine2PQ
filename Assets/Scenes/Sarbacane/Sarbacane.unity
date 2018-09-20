@@ -2166,10 +2166,10 @@ MonoBehaviour:
   BD_Cible3: {fileID: 143944783}
   BD_Cible4: {fileID: 488931597}
   UI_Man: {fileID: 1814428374}
-  startTime_Cible1: 6
-  startTime_Cible2: 6
-  startTime_Cible3: 6
-  startTime_Cible4: 6
+  timer_cible1: 6
+  timer_cible2: 6
+  timer_cible3: 6
+  timer_cible4: 6
   ShootButton: {fileID: 1832899499}
 --- !u!4 &609689678
 Transform:
@@ -4781,16 +4781,17 @@ MonoBehaviour:
   time: 120
   t: 0
   TimerText: {fileID: 1393863888}
+  LooseTime: 15
   ActualScore: 0
   AddScore: 3
   score: {fileID: 271181070}
   scoreOutline: {fileID: 271181069}
+  BonusScore: 15
   Time_Barre: {fileID: 10783215}
   Endgame_Button: {fileID: 1959239629}
   Timer_Button: {fileID: 813521227}
   Pause_Button: {fileID: 83308940}
   _my_GM: {fileID: 609689677}
-  is_shooting: 0
 --- !u!1 &1832899497
 GameObject:
   m_ObjectHideFlags: 0

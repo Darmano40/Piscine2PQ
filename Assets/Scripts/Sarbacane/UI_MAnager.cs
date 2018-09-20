@@ -14,6 +14,7 @@ public class UI_MAnager : MonoBehaviour {
     public int AddScore;
     public Text score;    //displayed score
     public Outline scoreOutline; //score outline
+    public int BonusScore;
 
     public Image Time_Barre;  //timer sprite
 
@@ -142,5 +143,10 @@ public class UI_MAnager : MonoBehaviour {
     public void DicreaseTime()
     {
         startTime -= LooseTime;
+    }
+
+    public void AddBonusScore()
+    {
+        ActualScore += BonusScore;
     }
 }
