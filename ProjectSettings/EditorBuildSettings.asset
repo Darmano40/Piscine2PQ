@@ -29,10 +29,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main_Menu/Level_Selection.unity
     guid: ba9a72c54884141468b59781fe205337
+  - enabled: 1
+    path: Assets/Scenes/Basket/Basket.unity
+    guid: 4fddf0fc4b7af3446be05ae328f20747
+  - enabled: 1
+    path: Assets/Scenes/Basket/Basket_Score.unity
+    guid: 509cefb883957ac4aaccb8b20a9c81ce
   - enabled: 0
     path: Assets/Scenes/Basket/Basket_Axel.unity
     guid: 30c531a382753d245839b2bc4c8b4de9
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Basket/Basket_Axel_Build.unity
     guid: b02d62d836f65c647a5fbae2d494b822
   - enabled: 1

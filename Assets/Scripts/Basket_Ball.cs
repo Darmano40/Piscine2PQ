@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class Basket_Ball : MonoBehaviour {
@@ -11,39 +13,51 @@ public class Basket_Ball : MonoBehaviour {
     public GameObject img_win;
     public GameObject img_Loose;
     public AudioClip Basket_throw;
-    public bool Launched;
+    public GameObject Direction;
+    public Image Bar;
+    public GameManager_Basket GameManagerBasket;
+    public GameObject PausePanel;
+    public Text TextTime;
 
+    private bool Launched;
+    private float Force;
+    private float ChargingUp = 0;
+    private float TimerFloat;
+    private float Seconds = 60;
 
-
-
-    void Start()
+    private void Update()
     {
-        Launched = false;
-
-        Respawn_Ball = transform.position;
-
-    }
-    private IEnumerator Waiting_Img()
-    {
-
-        yield return new WaitForSeconds(4f);
-        img_win.SetActive(false);
-        img_Loose.SetActive(false);
-
-    }
-
-    private void FixedUpdate()
-    {
-        if (Input.GetTouch(0).phase == TouchPhase.Began && Launched == false) {
-            Launched = true;
-            GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
-            Sound_Manager_Basket.instance.RandomizeSfx(Basket_throw);
-            
-
+        TimerFloat -= Time.deltaTime;
+        TextTime.text = ((Mathf.RoundToInt(TimerFloat) / 60).ToString()) + " : " + Mathf.RoundToInt(Seconds).ToString();
+        Force = Bar.fillAmount * 1000;
+        Bar.fillAmount += 0.01f*ChargingUp;
+        Seconds -= Time.deltaTime;
+        if (Seconds < 0)
+        {
+            Seconds = 59;
+        }
+        if (TimerFloat <= 0)
+        {
+            SceneManager.LoadScene("Basket_Score");
         }
     }
 
 
+    void Start()
+    {
+        TimerFloat = 180.0f; 
+        Launched = false;
+        Respawn_Ball = transform.position;
+    }
+
+    private IEnumerator Waiting_Img()
+    {
+
+        yield return new WaitForSeconds(2f);
+        img_win.SetActive(false);
+        img_Loose.SetActive(false);
+
+    }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -68,10 +82,45 @@ public class Basket_Ball : MonoBehaviour {
             StartCoroutine(Waiting_Img());
             GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionY;
             Launched = false;
+            GameManagerBasket.Redo();
         }
 
     }
+    public void Launching()
+    {
+        Launched = true;
+        GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+        GetComponent<Rigidbody2D>().AddForce(Direction.transform.TransformDirection(Vector2.right) * Force);
+        Sound_Manager_Basket.instance.RandomizeSfx(Basket_throw);
+        Bar.fillAmount = 0;
+    }
+    public void Charging()
+    {
+        ChargingUp = 1;
+    }
 
+    public void StopCharge()
+    {
+        ChargingUp = 0;
+    }
+
+    public void PauseGame()
+    {
+        Time.timeScale = 0;
+        PausePanel.SetActive(true);
+    }
+
+    public void ResumeGame()
+    {
+        Time.timeScale = 1;
+        PausePanel.SetActive(false);
+    }
+
+    public void QuitGame()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene("Main_Menu");
+    }
 
 }
 
