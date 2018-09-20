@@ -8,6 +8,7 @@ public class UI_Manager_feuille : MonoBehaviour
 
     public Image roll;
     public Image leaf;
+    public GameObject Score;
 
     public GameObject Feuille_Decrochee;
 
@@ -42,6 +43,10 @@ public class UI_Manager_feuille : MonoBehaviour
             // Décrocher la feuille avec "tear"
             tearedLeaves++;
             leafState = 0.0f;
+            if (tearedLeaves == totalLeavesPerRoll)
+            {
+                Score.SetActive(true);
+            }
         }
         UpdateLeafDisplay();
     }
