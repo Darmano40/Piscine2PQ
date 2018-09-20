@@ -312,6 +312,48 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 179602510}
   m_CullTransparentMesh: 0
+--- !u!1 &193781792
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 193781794}
+  - component: {fileID: 193781793}
+  m_Layer: 0
+  m_Name: LootManager (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &193781793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 193781792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b806e14f0c3f8364dbfcb29a9494296d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lootRarities:
+  - {fileID: 11400000, guid: 95825ee2254f2ed458b15573c1347c56, type: 2}
+--- !u!4 &193781794
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 193781792}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.7882881, y: 1.5579643, z: -7.81345}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &270266020
 GameObject:
   m_ObjectHideFlags: 0
@@ -710,6 +752,48 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1159015558}
   m_CullTransparentMesh: 0
+--- !u!1 &1196130571
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1196130573}
+  - component: {fileID: 1196130572}
+  m_Layer: 0
+  m_Name: LootManager (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1196130572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1196130571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b806e14f0c3f8364dbfcb29a9494296d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lootRarities:
+  - {fileID: 11400000, guid: 12fff78be724f6349b4949ef0b78e47e, type: 2}
+--- !u!4 &1196130573
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1196130571}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.7882881, y: 1.5579643, z: -7.81345}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1287353886
 GameObject:
   m_ObjectHideFlags: 0
@@ -771,6 +855,48 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1389833607
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1389833609}
+  - component: {fileID: 1389833608}
+  m_Layer: 0
+  m_Name: LootManager (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1389833608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1389833607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b806e14f0c3f8364dbfcb29a9494296d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lootRarities:
+  - {fileID: 11400000, guid: c4f25126f5717c24780fa3a45fb63918, type: 2}
+--- !u!4 &1389833609
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1389833607}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.7882881, y: 1.5579643, z: -7.81345}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1467800887
 GameObject:
@@ -878,9 +1004,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lootRarities:
   - {fileID: 11400000, guid: e99ab85dbc605c842946177d38a559f5, type: 2}
-  - {fileID: 11400000, guid: 12fff78be724f6349b4949ef0b78e47e, type: 2}
-  - {fileID: 11400000, guid: c4f25126f5717c24780fa3a45fb63918, type: 2}
-  - {fileID: 11400000, guid: 95825ee2254f2ed458b15573c1347c56, type: 2}
 --- !u!4 &1598842463
 Transform:
   m_ObjectHideFlags: 0
