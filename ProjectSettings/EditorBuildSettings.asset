@@ -54,6 +54,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Sarbacane/Sarbacane.unity
     guid: 3e582ac6d3860c5489ded843ec22eb67
   - enabled: 1
+    path: Assets/Scenes/Drague/Drague_Thierry.unity
+    guid: 4a01aed82c4b8ec42a4ee897ce527251
+  - enabled: 1
     path: Assets/Scenes/Lootbox/Lootbox.unity
     guid: d7c72db3bfd49b442823cfcf835cb091
+  - enabled: 1
+    path: Assets/Scenes/Drague/Drague_mots.unity
+    guid: 0ce5d41a511f2bf489a14f45bb9fdbc0
   m_configObjects: {}
