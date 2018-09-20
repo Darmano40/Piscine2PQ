@@ -241,6 +241,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &431049608 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1603889821858186, guid: 159a8a6df2472cf498ef0d841f1bdfa2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1381204908}
+--- !u!111 &431049610
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 431049608}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 4a2111892c058fe40ab3dfa84594f48f, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 4a2111892c058fe40ab3dfa84594f48f, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1172674250
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,6 +588,11 @@ Prefab:
         type: 2}
       propertyPath: m_AnchoredPosition.y
       value: 37
+      objectReference: {fileID: 0}
+    - target: {fileID: 114166928075907098, guid: 159a8a6df2472cf498ef0d841f1bdfa2,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 159a8a6df2472cf498ef0d841f1bdfa2, type: 2}
