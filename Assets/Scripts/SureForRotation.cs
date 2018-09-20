@@ -14,8 +14,6 @@ public class SureForRotation : MonoBehaviour {
         if (SceneManager.GetActiveScene().name == "Drague_02" || SceneManager.GetActiveScene().name == "PQ")
         {
             Screen.orientation = ScreenOrientation.Portrait;
-            Debug.Log("GoodScene");
-            Debug.Log(Screen.orientation);
         }
         else
         {
