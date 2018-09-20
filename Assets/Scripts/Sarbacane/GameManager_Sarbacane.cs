@@ -10,6 +10,7 @@ public class GameManager_Sarbacane : MonoBehaviour
     public GameObject Sarbacane_North_West;
     public GameObject Sarbacane_North_East;
     public GameObject Sarbacane_East;
+    public GameObject Aura_Cible1, Aura_Cible2, Aura_Cible3, Aura_Cible4;
 
     public GameObject Angry_Cible1, Angry_Cible2, Angry_Cible3, Angry_Cible4;
     public GameObject Calm_Cible1, Calm_Cible2, Calm_Cible3, Calm_Cible4;
@@ -28,6 +29,8 @@ public class GameManager_Sarbacane : MonoBehaviour
     public Button ShootButton;
 
     public int Minimum_Projectile_Range = 5, Maximum_Projectile_Range = 10;
+
+    public Sound_Manager_Sarbacane my_SM;
 
     // Use this for initialization
     void Start()
@@ -49,6 +52,7 @@ public class GameManager_Sarbacane : MonoBehaviour
 
         if (Number_Projectile_Cible1 <= 0)
         {
+            my_SM.Repere_Cible();
             Angry_Cible1.SetActive(true);
             Calm_Cible1.SetActive(false);
             timeLeft_Cible1--;
@@ -68,6 +72,7 @@ public class GameManager_Sarbacane : MonoBehaviour
         }
         if (Number_Projectile_Cible2 <= 0)
         {
+            //my_SM.Repere_Cible();
             Angry_Cible2.SetActive(true);
             Calm_Cible2.SetActive(false);
             timeLeft_Cible2--;
@@ -87,6 +92,7 @@ public class GameManager_Sarbacane : MonoBehaviour
         }
         if (Number_Projectile_Cible3 <= 0)
         {
+            //my_SM.Repere_Cible();
             Angry_Cible3.SetActive(true);
             Calm_Cible3.SetActive(false);
             timeLeft_Cible3--;
@@ -107,6 +113,7 @@ public class GameManager_Sarbacane : MonoBehaviour
         }
         if (Number_Projectile_Cible4 <= 0)
         {
+            //my_SM.Repere_Cible();
             Angry_Cible4.SetActive(true);
             Calm_Cible4.SetActive(false);
             timeLeft_Cible4--;
@@ -140,7 +147,10 @@ public class GameManager_Sarbacane : MonoBehaviour
         Sarbacane_West.SetActive(false);
         Sarbacane_North_East.SetActive(false);
         Sarbacane_North_West.SetActive(false);
-
+        Aura_Cible1.SetActive(true);
+        Aura_Cible2.SetActive(false);
+        Aura_Cible3.SetActive(false);
+        Aura_Cible4.SetActive(false);
 
     }
 
@@ -150,6 +160,10 @@ public class GameManager_Sarbacane : MonoBehaviour
         Sarbacane_West.SetActive(false);
         Sarbacane_North_East.SetActive(true);
         Sarbacane_North_West.SetActive(false);
+        Aura_Cible1.SetActive(false);
+        Aura_Cible2.SetActive(true);
+        Aura_Cible3.SetActive(false);
+        Aura_Cible4.SetActive(false);
     }
 
     public void Cibles3()
@@ -158,6 +172,10 @@ public class GameManager_Sarbacane : MonoBehaviour
         Sarbacane_West.SetActive(false);
         Sarbacane_North_East.SetActive(false);
         Sarbacane_North_West.SetActive(true);
+        Aura_Cible1.SetActive(false);
+        Aura_Cible2.SetActive(false);
+        Aura_Cible3.SetActive(true);
+        Aura_Cible4.SetActive(false);
     }
 
     public void Cibles4()
@@ -166,6 +184,10 @@ public class GameManager_Sarbacane : MonoBehaviour
         Sarbacane_West.SetActive(true);
         Sarbacane_North_East.SetActive(false);
         Sarbacane_North_West.SetActive(false);
+        Aura_Cible1.SetActive(false);
+        Aura_Cible2.SetActive(false);
+        Aura_Cible3.SetActive(false);
+        Aura_Cible4.SetActive(true);
 
     }
 
