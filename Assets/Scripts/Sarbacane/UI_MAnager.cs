@@ -21,6 +21,8 @@ public class UI_MAnager : MonoBehaviour {
     public GameObject Endgame_Button, Timer_Button, Pause_Button;
 
     public GameManager_Sarbacane _my_GM;
+
+    public Sound_Manager_Sarbacane my_SM;
     
     
     // Use this for initialization
@@ -65,6 +67,7 @@ public class UI_MAnager : MonoBehaviour {
         if(_my_GM.Sarbacane_East.activeSelf || _my_GM.Sarbacane_North_East.activeSelf || _my_GM.Sarbacane_North_West.activeSelf || _my_GM.Sarbacane_West.activeSelf)
         if (t >= 0f)
         {
+            
             Scoring();
             _my_GM.DicreaseProjectiles();
         }
@@ -148,6 +151,7 @@ public class UI_MAnager : MonoBehaviour {
 
     public void Timeout()
     {
+        my_SM.TimeOut_Sarbacane();
         Time.timeScale = 0;
         TimerText.text = "0:0";
         Endgame_Button.SetActive(true);
