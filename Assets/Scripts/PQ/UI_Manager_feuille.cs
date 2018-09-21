@@ -8,16 +8,16 @@ public class UI_Manager_feuille : MonoBehaviour
 
     public Image roll;
     public Image leaf;
+
     public GameObject Score;
     public GameObject Exit_Button;
     public GameObject BG_voice_intensity;
-
     public GameObject Feuille_Decrochee;
 
+    public float leafReset = 0.0f;
     public float draggedleaf = 0.2f;
     public float leafState = 0.2f;
     public float filledLeaf = 1.2f;
-
     public float tearedLeaves = 1.0f;
     public float totalLeavesPerRoll = 18.0f;
 
@@ -31,17 +31,21 @@ public class UI_Manager_feuille : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             RollOnce();
-            Feuille_Decrochee.transform.Translate(0.0f, -6.5f, 0.0f);
+            Feuille_Decrochee.transform.Translate(0.0f, -6.0f, 0.0f);
+        }
+
+        if (leafReset >= 1.6f)
+        {
+            Feuille_Decrochee.SetActive(false);
         }
     }
 
     public void RollOnce()
     {
-        
+        leafReset += draggedleaf;
         leafState += draggedleaf;
         if (leafState >= filledLeaf)
         {
-            Feuille_Decrochee.SetActive(true);
             // Décrocher la feuille avec "tear"
             tearedLeaves++;
             leafState = 0.0f;
