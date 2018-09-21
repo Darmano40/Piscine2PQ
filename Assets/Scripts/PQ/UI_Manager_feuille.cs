@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class UI_Manager_feuille : MonoBehaviour
 {
 
-    public Image roll;
+    public Image jauge;
     public Image leaf;
 
     public GameObject Score;
@@ -18,26 +18,27 @@ public class UI_Manager_feuille : MonoBehaviour
     public float draggedleaf = 0.2f;
     public float leafState = 0.2f;
     public float filledLeaf = 1.2f;
-    public float tearedLeaves = 1.0f;
+    public int tearedLeaves = 0;
     public float totalLeavesPerRoll = 18.0f;
+
+    public float jaugePQ;
 
 	void Start ()
     {
+        jaugePQ = tearedLeaves / totalLeavesPerRoll;
+        Debug.Log(jaugePQ);
         UpdateLeafDisplay();
+        UpdateJaugeDisplay(tearedLeaves);
     }
 	
 	void Update ()
     {
+        jaugePQ = tearedLeaves / totalLeavesPerRoll;
         if (Input.GetKeyDown(KeyCode.Mouse0)) // Commander pour défilement feuille
         
         {
             RollOnce();
             Feuille_Decrochee.transform.Translate(0.0f, -6.0f, 0.0f);
-        }
-
-        if (leafReset >= 1.6f)
-        {
-            Feuille_Decrochee.SetActive(false);
         }
     }
 
@@ -58,6 +59,7 @@ public class UI_Manager_feuille : MonoBehaviour
             }
         }
         UpdateLeafDisplay();
+        UpdateJaugeDisplay(tearedLeaves);
     }
 
     public void UpdateLeafDisplay()
@@ -66,10 +68,10 @@ public class UI_Manager_feuille : MonoBehaviour
         Debug.Log("Leaf Sprite Updated");
     }
 
-    public void UpdateRollDisplay(int tearedLeaves)
+    public void UpdateJaugeDisplay(int tearedLeaves)
     {
-        roll.fillAmount = (totalLeavesPerRoll * 1.0f) / (tearedLeaves * 1.0f);
-        Debug.Log("Roll Sprite Updated");
+        jauge.fillAmount = jaugePQ;
+        Debug.Log("Jauge Sprite Updated");
     }
 
 }
