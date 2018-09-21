@@ -32,7 +32,7 @@ public class GameManager_Sarbacane : MonoBehaviour
     public Sound_Manager_Sarbacane my_SM;
 
     public GameObject Tuto01, Tuto02, Tuto03;
-    public bool can_Shoot, tuto02_Activated;
+    public bool can_Shoot, tuto02_Activated, tuto03_Activated;
 
     // Use this for initialization
     void Start()
@@ -54,8 +54,14 @@ public class GameManager_Sarbacane : MonoBehaviour
         
             if (Number_Projectile_Cible1 <= 0)
             {
-                //my_SM.Repere_Cible();
-                Angry_Cible1.SetActive(true);
+
+            if (!tuto03_Activated)
+            {
+                Tuto03.SetActive(true);
+                tuto03_Activated = true;
+            }
+            //my_SM.Repere_Cible();
+            Angry_Cible1.SetActive(true);
                 timeLeft_Cible1--;
                 if (timeLeft_Cible1 <= 0f && !Cible1_Returned)
                 {
@@ -74,9 +80,14 @@ public class GameManager_Sarbacane : MonoBehaviour
                 }
             }
             if (Number_Projectile_Cible2 <= 0)
+        {
+            if (!tuto03_Activated)
             {
-                //my_SM.Repere_Cible();
-                Angry_Cible2.SetActive(true);
+                Tuto03.SetActive(true);
+                tuto03_Activated = true;
+            }
+            //my_SM.Repere_Cible();
+            Angry_Cible2.SetActive(true);
                 timeLeft_Cible2--;
                 if (timeLeft_Cible2 <= 0f && !Cible2_Returned)
                 {
@@ -94,9 +105,14 @@ public class GameManager_Sarbacane : MonoBehaviour
             }
             }
             if (Number_Projectile_Cible3 <= 0)
+        {
+            if (!tuto03_Activated)
             {
-                //my_SM.Repere_Cible();
-                Angry_Cible3.SetActive(true);
+                Tuto03.SetActive(true);
+                tuto03_Activated = true;
+            }
+            //my_SM.Repere_Cible();
+            Angry_Cible3.SetActive(true);
                 timeLeft_Cible3--;
                 if (timeLeft_Cible3 <= 0f && !Cible3_Returned)
                 {
@@ -115,9 +131,14 @@ public class GameManager_Sarbacane : MonoBehaviour
             }
             }
             if (Number_Projectile_Cible4 <= 0)
+        {
+            if (!tuto03_Activated)
             {
-                //my_SM.Repere_Cible();
-                Angry_Cible4.SetActive(true);
+                Tuto03.SetActive(true);
+                tuto03_Activated = true;
+            }
+            //my_SM.Repere_Cible();
+            Angry_Cible4.SetActive(true);
                 timeLeft_Cible4--;
                 if (timeLeft_Cible4 <= 0f && !Cible4_Returned)
                 {

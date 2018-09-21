@@ -58,6 +58,10 @@ public class PauseManager : MonoBehaviour {
         for (int i = 0; i < BD_Cibles.Length; i++)
         {
             BD_Cibles[i].SetActive(false);
+        }
+        for (int i = 0; i < Angry_Cibles.Length; i++)
+        {
+            Debug.Log("angry_returns");
             Angry_Cibles[i].SetActive(false);
         }
 

@@ -522,7 +522,11 @@ MonoBehaviour:
   - {fileID: 143944783}
   - {fileID: 1187349075}
   - {fileID: 1090102196}
-  Angry_Cibles: []
+  Angry_Cibles:
+  - {fileID: 201535022}
+  - {fileID: 14268802}
+  - {fileID: 1455635465}
+  - {fileID: 1202086722}
   my_UIM: {fileID: 1814428374}
   my_GM: {fileID: 609689677}
   End_Buttons: {fileID: 1959239629}
@@ -1719,7 +1723,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: '
 
-    1. Choose a target by clicking on it.
+    Tap on a pupil
 
 '
 --- !u!222 &448772444
@@ -2317,7 +2321,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 3. Be spotted and your time will be decrease.
+  m_Text: 'If you be spotted, dont do anything until he turns around '
 --- !u!222 &579681058
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2717,10 +2721,10 @@ MonoBehaviour:
   BD_Cible3: {fileID: 143944783}
   BD_Cible4: {fileID: 488931597}
   UI_Man: {fileID: 1814428374}
-  timer_cible1: 6
-  timer_cible2: 6
-  timer_cible3: 6
-  timer_cible4: 6
+  timer_cible1: 3
+  timer_cible2: 3
+  timer_cible3: 3
+  timer_cible4: 3
   ShootButton: {fileID: 1832899499}
   Minimum_Projectile_Range: 5
   Maximum_Projectile_Range: 10
@@ -2730,6 +2734,7 @@ MonoBehaviour:
   Tuto03: {fileID: 579681055}
   can_Shoot: 0
   tuto02_Activated: 0
+  tuto03_Activated: 0
 --- !u!4 &609689678
 Transform:
   m_ObjectHideFlags: 0
@@ -3099,7 +3104,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '2. Touch "Shoot"
+  m_Text: '
+
+    Hit "Shoot"
 
 '
 --- !u!222 &969116187

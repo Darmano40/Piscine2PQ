@@ -91,11 +91,6 @@ public class UI_MAnager : MonoBehaviour {
     void Scoring()
     {
         Tuto02.SetActive(false);
-        if (!tuto03_Activated)
-        {
-            Tuto03.SetActive(true);
-            tuto03_Activated = true;
-        }
             ActualScore += AddScore;
             score.text = "" + ActualScore;
     }
