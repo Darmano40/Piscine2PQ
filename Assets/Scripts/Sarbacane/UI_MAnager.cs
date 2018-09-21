@@ -36,7 +36,8 @@ public class UI_MAnager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        
+        if (!my_PM.is_Paused)
+        {
             timeDown();
             /*
             if (Input.anyKeyDown && t >= 0f)
@@ -46,6 +47,7 @@ public class UI_MAnager : MonoBehaviour {
             */
             timer_barre_down();
             ReSizing();
+        }
 	}
 
     void timeDown()    
