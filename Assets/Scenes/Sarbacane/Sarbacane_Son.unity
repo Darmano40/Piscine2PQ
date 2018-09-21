@@ -2321,7 +2321,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'If you be spotted, dont do anything until he turns around '
+  m_Text: 'If you are spotted, dont do anything until he turns around '
 --- !u!222 &579681058
 CanvasRenderer:
   m_ObjectHideFlags: 0
