@@ -25,7 +25,9 @@ public class UI_MAnager : MonoBehaviour {
     public Sound_Manager_Sarbacane my_SM;
 
     public PauseManager my_PM;
-    
+
+    public GameObject Tuto01, Tuto02, Tuto03;
+    public bool tuto03_Activated;
     
     // Use this for initialization
     void Start () {
@@ -72,19 +74,30 @@ public class UI_MAnager : MonoBehaviour {
 
     public void CanScoring()
     {
-        if(_my_GM.Sarbacane_East.activeSelf || _my_GM.Sarbacane_North_East.activeSelf || _my_GM.Sarbacane_North_West.activeSelf || _my_GM.Sarbacane_West.activeSelf)
-        if (t >= 0f)
+        if (_my_GM.can_Shoot)
         {
-            my_SM.Impact_Cible();
-            Scoring();
-            _my_GM.DicreaseProjectiles();
+            if (_my_GM.Sarbacane_East.activeSelf || _my_GM.Sarbacane_North_East.activeSelf || _my_GM.Sarbacane_North_West.activeSelf || _my_GM.Sarbacane_West.activeSelf)
+            {
+                if (t >= 0f)
+                {
+                    my_SM.Impact_Cible();
+                    Scoring();
+                    _my_GM.DicreaseProjectiles();
+                }
+            }
         }
     }
 
     void Scoring()
     {
-        ActualScore += AddScore;
-        score.text = "" + ActualScore;
+        Tuto02.SetActive(false);
+        if (!tuto03_Activated)
+        {
+            Tuto03.SetActive(true);
+            tuto03_Activated = true;
+        }
+            ActualScore += AddScore;
+            score.text = "" + ActualScore;
     }
 
     void ReSizing()
@@ -148,7 +161,7 @@ public class UI_MAnager : MonoBehaviour {
 
     public void DicreaseTime()
     {
-        startTime -= LooseTime;
+        t -= LooseTime * 60;
         Debug.Log("decrease time");
     }
 

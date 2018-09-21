@@ -30,7 +30,9 @@ public class GameManager_Sarbacane : MonoBehaviour
     public int Minimum_Projectile_Range = 5, Maximum_Projectile_Range = 10;
 
     public Sound_Manager_Sarbacane my_SM;
-    
+
+    public GameObject Tuto01, Tuto02, Tuto03;
+    public bool can_Shoot, tuto02_Activated;
 
     // Use this for initialization
     void Start()
@@ -49,84 +51,89 @@ public class GameManager_Sarbacane : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
+            if (Number_Projectile_Cible1 <= 0)
+            {
+                //my_SM.Repere_Cible();
+                Angry_Cible1.SetActive(true);
+                timeLeft_Cible1--;
+                if (timeLeft_Cible1 <= 0f && !Cible1_Returned)
+                {
 
-        if (Number_Projectile_Cible1 <= 0)
-        {
-            //my_SM.Repere_Cible();
-            Angry_Cible1.SetActive(true);
-            timeLeft_Cible1--;
-            if(timeLeft_Cible1 <= 0f && !Cible1_Returned)
-            {
-                UI_Man.AddBonusScore();
-                ResetNumberProjectilesCibles1();
+                    UI_Man.AddBonusScore();
+                    ResetNumberProjectilesCibles1();
+                }
+                else if (timeLeft_Cible1 >= 0f && Input.GetMouseButtonDown(0))
+                {
+                    Cible1_Returned = true;
+                    BD_Cible1.SetActive(true);
+                    UI_Man.DicreaseTime();
+                    Sarbacane_East.SetActive(false);
+                    timeLeft_Cible1 = -0.1f;
+                    Tuto03.SetActive(false);
+                }
             }
-            else if(timeLeft_Cible1 >= 0f && Input.GetMouseButtonDown(0))
+            if (Number_Projectile_Cible2 <= 0)
             {
-                Cible1_Returned = true;
-                BD_Cible1.SetActive(true);
-                UI_Man.DicreaseTime();
-                Sarbacane_East.SetActive(false);
-                timeLeft_Cible1 = -0.1f;
+                //my_SM.Repere_Cible();
+                Angry_Cible2.SetActive(true);
+                timeLeft_Cible2--;
+                if (timeLeft_Cible2 <= 0f && !Cible2_Returned)
+                {
+                    UI_Man.AddBonusScore();
+                    ResetNumberProjectilesCibles2();
+                }
+                else if (timeLeft_Cible2 >= 0f && Input.GetMouseButtonDown(0))
+                {
+                    Cible2_Returned = true;
+                    BD_Cible2.SetActive(true);
+                    UI_Man.DicreaseTime();
+                    Sarbacane_North_East.SetActive(false);
+                    timeLeft_Cible2 = -0.1f;
+                    Tuto03.SetActive(false);
             }
-        }
-        if (Number_Projectile_Cible2 <= 0)
-        {
-            //my_SM.Repere_Cible();
-            Angry_Cible2.SetActive(true);
-            timeLeft_Cible2--;
-            if (timeLeft_Cible2 <= 0f && !Cible2_Returned)
-            {
-                UI_Man.AddBonusScore();
-                ResetNumberProjectilesCibles2();
             }
-            else if (timeLeft_Cible2 >= 0f && Input.GetMouseButtonDown(0))
+            if (Number_Projectile_Cible3 <= 0)
             {
-                Cible2_Returned = true;
-                BD_Cible2.SetActive(true);
-                UI_Man.DicreaseTime();
-                Sarbacane_North_East.SetActive(false);
-                timeLeft_Cible2 = -0.1f;
-            }
-        }
-        if (Number_Projectile_Cible3 <= 0)
-        {
-            //my_SM.Repere_Cible();
-            Angry_Cible3.SetActive(true);
-            timeLeft_Cible3--;
-            if (timeLeft_Cible3 <= 0f && !Cible3_Returned)
-            {
-                UI_Man.AddBonusScore();
-                ResetNumberProjectilesCibles3();
-            }
-            else if (timeLeft_Cible3 >= 0f && Input.GetMouseButtonDown(0))
-            {
-                Cible3_Returned = true;
-                BD_Cible3.SetActive(true);
-                UI_Man.DicreaseTime();
-                Sarbacane_North_West.SetActive(false);
-                timeLeft_Cible3 = -0.1f;
+                //my_SM.Repere_Cible();
+                Angry_Cible3.SetActive(true);
+                timeLeft_Cible3--;
+                if (timeLeft_Cible3 <= 0f && !Cible3_Returned)
+                {
+                    UI_Man.AddBonusScore();
+                    ResetNumberProjectilesCibles3();
+                }
+                else if (timeLeft_Cible3 >= 0f && Input.GetMouseButtonDown(0))
+                {
+                    Cible3_Returned = true;
+                    BD_Cible3.SetActive(true);
+                    UI_Man.DicreaseTime();
+                    Sarbacane_North_West.SetActive(false);
+                    timeLeft_Cible3 = -0.1f;
+                    Tuto03.SetActive(false);
 
             }
-        }
-        if (Number_Projectile_Cible4 <= 0)
-        {
-            //my_SM.Repere_Cible();
-            Angry_Cible4.SetActive(true);
-            timeLeft_Cible4--;
-            if (timeLeft_Cible4 <= 0f && !Cible4_Returned)
-            {
-                UI_Man.AddBonusScore();
-                ResetNumberProjectilesCibles4();
             }
-            else if (timeLeft_Cible4 >= 0f && Input.GetMouseButtonDown(0))
+            if (Number_Projectile_Cible4 <= 0)
             {
-                Cible4_Returned = true;
-                BD_Cible4.SetActive(true);
-                UI_Man.DicreaseTime();
-                Sarbacane_West.SetActive(false);
-                timeLeft_Cible4 = -0.1f;
+                //my_SM.Repere_Cible();
+                Angry_Cible4.SetActive(true);
+                timeLeft_Cible4--;
+                if (timeLeft_Cible4 <= 0f && !Cible4_Returned)
+                {
+                    UI_Man.AddBonusScore();
+                    ResetNumberProjectilesCibles4();
+                }
+                else if (timeLeft_Cible4 >= 0f && Input.GetMouseButtonDown(0))
+                {
+                    Cible4_Returned = true;
+                    BD_Cible4.SetActive(true);
+                    UI_Man.DicreaseTime();
+                    Sarbacane_West.SetActive(false);
+                    timeLeft_Cible4 = -0.1f;
+                    Tuto03.SetActive(false);
             }
-        }
+            }
 
         if(BD_Cible1.activeSelf && BD_Cible2.activeSelf && BD_Cible3.activeSelf && BD_Cible4.activeSelf)
         {
@@ -147,7 +154,13 @@ public class GameManager_Sarbacane : MonoBehaviour
         Aura_Cible2.SetActive(false);
         Aura_Cible3.SetActive(false);
         Aura_Cible4.SetActive(false);
-
+        Tuto01.SetActive(false);
+        can_Shoot = true;
+        if (!tuto02_Activated)
+        {
+            Tuto02.SetActive(true);
+            tuto02_Activated = true;
+        }
     }
 
     public void Cibles2()
@@ -160,6 +173,13 @@ public class GameManager_Sarbacane : MonoBehaviour
         Aura_Cible2.SetActive(true);
         Aura_Cible3.SetActive(false);
         Aura_Cible4.SetActive(false);
+        Tuto01.SetActive(false);
+        can_Shoot = true;
+        if (!tuto02_Activated)
+        {
+            Tuto02.SetActive(true);
+            tuto02_Activated = true;
+        }
     }
 
     public void Cibles3()
@@ -172,6 +192,13 @@ public class GameManager_Sarbacane : MonoBehaviour
         Aura_Cible2.SetActive(false);
         Aura_Cible3.SetActive(true);
         Aura_Cible4.SetActive(false);
+        Tuto01.SetActive(false);
+        can_Shoot = true;
+        if (!tuto02_Activated)
+        {
+            Tuto02.SetActive(true);
+            tuto02_Activated = true;
+        }
     }
 
     public void Cibles4()
@@ -184,6 +211,13 @@ public class GameManager_Sarbacane : MonoBehaviour
         Aura_Cible2.SetActive(false);
         Aura_Cible3.SetActive(false);
         Aura_Cible4.SetActive(true);
+        Tuto01.SetActive(false);
+        can_Shoot = true;
+        if (!tuto02_Activated)
+        {
+            Tuto02.SetActive(true);
+            tuto02_Activated = true;
+        }
 
     }
 
