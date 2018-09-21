@@ -5,11 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class PauseManager : MonoBehaviour {
 
-    public GameObject Pause_Buttons;
+    public GameObject Pause_Buttons, Timer, Pause_Icon;
     public UI_MAnager my_UIM;
     public GameManager_Sarbacane my_GM;
     private Scene actualScene;
     public GameObject End_Buttons;
+    public bool is_Paused;
 
 	// Use this for initialization
 	void Start () {
@@ -23,12 +24,14 @@ public class PauseManager : MonoBehaviour {
 
     public void PauseGame()
     {
+        is_Paused = true;
         Time.timeScale = 0;
         Pause_Buttons.SetActive(true);
     }
 
     public void Resume()
     {
+        is_Paused = false;
         Time.timeScale = 1;
         Pause_Buttons.SetActive(false);
     }
@@ -37,9 +40,13 @@ public class PauseManager : MonoBehaviour {
     {
         Time.timeScale = 1;
         my_UIM.ActualScore = 0;
-        my_UIM.time = 120;
+        my_UIM.score.text = "" + 0;
+        my_UIM.time = my_UIM.startTime;
+        my_UIM.t = my_UIM.time * 60;
         Pause_Buttons.SetActive(false);
         End_Buttons.SetActive(false);
+        Timer.SetActive(true);
+        Pause_Icon.SetActive(true);
     }
 
     public void Menu()

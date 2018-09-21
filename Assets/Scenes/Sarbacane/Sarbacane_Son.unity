@@ -514,9 +514,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Pause_Buttons: {fileID: 827184601}
+  Timer: {fileID: 813521227}
+  Pause_Icon: {fileID: 83308940}
   my_UIM: {fileID: 1814428374}
-  my_GM: {fileID: 0}
-  End_Buttons: {fileID: 0}
+  my_GM: {fileID: 609689677}
+  End_Buttons: {fileID: 1959239629}
+  is_Paused: 0
 --- !u!1 &128507927
 GameObject:
   m_ObjectHideFlags: 0
@@ -5622,9 +5625,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 415687f6dc2e9e042b8d523214782ef8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 119
+  time: 120
   t: 0
   TimerText: {fileID: 1393863888}
+  startTime: 0
   LooseTime: 15
   ActualScore: 0
   AddScore: 3
@@ -5637,6 +5641,7 @@ MonoBehaviour:
   Pause_Button: {fileID: 83308940}
   _my_GM: {fileID: 609689677}
   my_SM: {fileID: 358206786}
+  my_PM: {fileID: 0}
 --- !u!1 &1832899497
 GameObject:
   m_ObjectHideFlags: 0
@@ -5654,7 +5659,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1832899498
 RectTransform:
   m_ObjectHideFlags: 0

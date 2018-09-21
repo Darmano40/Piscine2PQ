@@ -31,6 +31,7 @@ public class GameManager_Sarbacane : MonoBehaviour
     public int Minimum_Projectile_Range = 5, Maximum_Projectile_Range = 10;
 
     public Sound_Manager_Sarbacane my_SM;
+    
 
     // Use this for initialization
     void Start()
@@ -52,7 +53,7 @@ public class GameManager_Sarbacane : MonoBehaviour
 
         if (Number_Projectile_Cible1 <= 0)
         {
-            my_SM.Repere_Cible();
+            //my_SM.Repere_Cible();
             Angry_Cible1.SetActive(true);
             Calm_Cible1.SetActive(false);
             timeLeft_Cible1--;

@@ -4,10 +4,10 @@ using UnityEngine;
 using UnityEngine.UI;
 public class UI_MAnager : MonoBehaviour {
 
-    public int time;   //actual time
+    public float time;   //actual time
     public float t;
     public Text TimerText;    //time wrote in a text in the canvas
-    private float startTime;  //strting time
+    public float startTime;  //strting time
     public float LooseTime;
 
     public int ActualScore;
@@ -23,38 +23,44 @@ public class UI_MAnager : MonoBehaviour {
     public GameManager_Sarbacane _my_GM;
 
     public Sound_Manager_Sarbacane my_SM;
+
+    public PauseManager my_PM;
     
     
     // Use this for initialization
     void Start () {
+        //startTime = time;
+        t = time * 60;
         startTime = time;
     }
 	
 	// Update is called once per frame
 	void Update () {
-        timeDown();
-        /*
-        if (Input.anyKeyDown && t >= 0f)
-        {
-            Scoring();
-        }
-        */
-        timer_barre_down();
-        ReSizing();
+        
+            timeDown();
+            /*
+            if (Input.anyKeyDown && t >= 0f)
+            {
+                Scoring();
+            }
+            */
+            timer_barre_down();
+            ReSizing();
 	}
 
     void timeDown()    
     {
-        t = startTime - Time.time;
 
+        //t = startTime - Time.time;
+        t--;
         string minutes = ((int)t / 60).ToString();
-        string seconds = (t % 60).ToString("f0");
+        //string seconds = (t % 60).ToString("f0");
         if (t >= 0f)
         {
-            TimerText.text = minutes + ":" + seconds;
+            TimerText.text = minutes; //+ ":" + seconds;
         }
 
-        else
+        if (t == 0f)
         {
             Timeout();
         }
@@ -132,7 +138,7 @@ public class UI_MAnager : MonoBehaviour {
 
     void timer_barre_down ()
     {
-        Time_Barre.fillAmount = ((t) / startTime);
+        Time_Barre.fillAmount = ((t / 60) /time);
         //Debug.Log(Time_Barre.fillAmount);
         //Debug.Log(Time.time);
 
@@ -158,5 +164,6 @@ public class UI_MAnager : MonoBehaviour {
         Endgame_Button.SetActive(true);
         Timer_Button.SetActive(false);
         Pause_Button.SetActive(false);
+        t = 0;
     }
 }
