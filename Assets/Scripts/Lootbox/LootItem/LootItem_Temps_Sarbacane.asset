@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Name: LootItem_Temps_Sarbacane
   m_EditorClassIdentifier: 
   lootName: Temps Sarbacane
-  lootPrefab: {fileID: 1952133967175688, guid: 398e64e6369c6fb47a28cebbbf5a1e0b, type: 2}
+  lootPrefab: {fileID: 1462620040608502, guid: 0fe68028df496f94a9d48282b8155bd5, type: 2}
   lootType: 0

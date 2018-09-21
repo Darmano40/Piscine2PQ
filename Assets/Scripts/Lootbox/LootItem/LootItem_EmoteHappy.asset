@@ -3,7 +3,7 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -13,4 +13,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lootName: 'Emote : Cry'
   lootPrefab: {fileID: 1952133967175688, guid: 398e64e6369c6fb47a28cebbbf5a1e0b, type: 2}
-  lootType: 4
+  lootType: 1
