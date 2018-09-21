@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -484,6 +484,51 @@ Prefab:
         type: 2}
       propertyPath: m_SizeDelta.y
       value: -266.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224981163283763826, guid: 159a8a6df2472cf498ef0d841f1bdfa2,
+        type: 2}
+      propertyPath: m_LocalScale.x
+      value: 3.6551566
+      objectReference: {fileID: 0}
+    - target: {fileID: 224981163283763826, guid: 159a8a6df2472cf498ef0d841f1bdfa2,
+        type: 2}
+      propertyPath: m_LocalScale.y
+      value: 3.6551566
+      objectReference: {fileID: 0}
+    - target: {fileID: 224981163283763826, guid: 159a8a6df2472cf498ef0d841f1bdfa2,
+        type: 2}
+      propertyPath: m_LocalScale.z
+      value: 3.6551566
+      objectReference: {fileID: 0}
+    - target: {fileID: 224981163283763826, guid: 159a8a6df2472cf498ef0d841f1bdfa2,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 224875675324640328, guid: 159a8a6df2472cf498ef0d841f1bdfa2,
+        type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.822567
+      objectReference: {fileID: 0}
+    - target: {fileID: 224875675324640328, guid: 159a8a6df2472cf498ef0d841f1bdfa2,
+        type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.822567
+      objectReference: {fileID: 0}
+    - target: {fileID: 224875675324640328, guid: 159a8a6df2472cf498ef0d841f1bdfa2,
+        type: 2}
+      propertyPath: m_LocalScale.z
+      value: 0.822567
+      objectReference: {fileID: 0}
+    - target: {fileID: 224875675324640328, guid: 159a8a6df2472cf498ef0d841f1bdfa2,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -266
+      objectReference: {fileID: 0}
+    - target: {fileID: 224875675324640328, guid: 159a8a6df2472cf498ef0d841f1bdfa2,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 12
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 159a8a6df2472cf498ef0d841f1bdfa2, type: 2}
