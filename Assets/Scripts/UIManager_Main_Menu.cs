@@ -74,12 +74,12 @@ public class UIManager_Main_Menu : MonoBehaviour {
 
     public void LoadSarbacane()
     {
-        SceneManager.LoadScene("Sarbacane");
+        SceneManager.LoadScene("Sarbacane_Son");
     }
 
     public void LoadDrague()
     {
-        SceneManager.LoadScene("Drague_02");
+        SceneManager.LoadScene("Drague_tuto");
     }
 
     public void LoadMainMenu()

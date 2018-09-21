@@ -1707,13 +1707,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '1. Choose a target by clicking on it.
-
-    2. Shoot it by clicking on the button "Shoot".
-
-    3. Do not be spotted, or your time will be decrease.
-
-    4. Achieve the best score before the end of the timer.'
+  m_Text: "1. Choose a target by clicking on it.\n2. Shoot it by shouting \n3. Do
+    not be spotted, or your time will be decrease.\n4. Achieve the best score before
+    the end of the timer."
 --- !u!222 &448772444
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5658,7 +5654,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1832899498
 RectTransform:
   m_ObjectHideFlags: 0

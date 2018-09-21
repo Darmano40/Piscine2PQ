@@ -2154,6 +2154,10 @@ MonoBehaviour:
   Sarbacane_North_West: {fileID: 411455520}
   Sarbacane_North_East: {fileID: 874250213}
   Sarbacane_East: {fileID: 1701094334}
+  Aura_Cible1: {fileID: 0}
+  Aura_Cible2: {fileID: 0}
+  Aura_Cible3: {fileID: 0}
+  Aura_Cible4: {fileID: 0}
   Angry_Cible1: {fileID: 1202086722}
   Angry_Cible2: {fileID: 1455635465}
   Angry_Cible3: {fileID: 14268802}
@@ -2174,6 +2178,7 @@ MonoBehaviour:
   ShootButton: {fileID: 1832899499}
   Minimum_Projectile_Range: 5
   Maximum_Projectile_Range: 10
+  my_SM: {fileID: 0}
 --- !u!4 &609689678
 Transform:
   m_ObjectHideFlags: 0
@@ -4795,6 +4800,7 @@ MonoBehaviour:
   Timer_Button: {fileID: 813521227}
   Pause_Button: {fileID: 83308940}
   _my_GM: {fileID: 609689677}
+  my_SM: {fileID: 0}
 --- !u!1 &1832899497
 GameObject:
   m_ObjectHideFlags: 0
@@ -4812,7 +4818,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1832899498
 RectTransform:
   m_ObjectHideFlags: 0
