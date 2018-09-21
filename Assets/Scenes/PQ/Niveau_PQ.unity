@@ -847,7 +847,7 @@ Prefab:
     - target: {fileID: 114165061544576228, guid: ea2ea268cf1412943ab4b9961252e3d5,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114165061544576228, guid: ea2ea268cf1412943ab4b9961252e3d5,
         type: 2}
@@ -858,16 +858,21 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 952658194}
+      objectReference: {fileID: 952658197}
     - target: {fileID: 114165061544576228, guid: ea2ea268cf1412943ab4b9961252e3d5,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: set_inputOverride
+      value: SceneLoading
       objectReference: {fileID: 0}
     - target: {fileID: 114165061544576228, guid: ea2ea268cf1412943ab4b9961252e3d5,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.EventSystems.BaseInput, UnityEngine.UI
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114165061544576228, guid: ea2ea268cf1412943ab4b9961252e3d5,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: PQ
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea2ea268cf1412943ab4b9961252e3d5, type: 2}
