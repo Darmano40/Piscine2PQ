@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class UIManager_Main_Menu : MonoBehaviour {
 
     public float imageSpeed, screenSpeed;
+    public GameObject TextSpashscreen;
 
     private bool isSplashScreenOn;
     private GameObject fond, splashScreen, mainMenu;
@@ -31,9 +32,11 @@ public class UIManager_Main_Menu : MonoBehaviour {
         {
             if (Input.GetMouseButtonDown(0) && isSplashScreenOn)
                 isSplashScreenOn = false;
+            
 
             if (!isSplashScreenOn)
             {
+                TextSpashscreen.SetActive(false);
                 mainMenu.transform.GetChild(0).GetComponent<Button>().interactable = true;
                 mainMenu.transform.GetChild(1).GetComponent<Button>().interactable = true;
 
