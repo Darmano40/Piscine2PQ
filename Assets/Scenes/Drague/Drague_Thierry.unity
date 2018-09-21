@@ -780,12 +780,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90a8d6e62360cbd4b935931515f88877, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GirlHappy: {fileID: 0}
-  GirlUnhappy: {fileID: 0}
-  HappyEnd: {fileID: 0}
-  BadEnd: {fileID: 0}
-  BadSounds: {fileID: 0}
-  GoodSound: {fileID: 0}
+  GirlHappy: {fileID: 8300000, guid: 8aec59e72f5d65b4aafc7ad8a9f3e569, type: 3}
+  GirlUnhappy: {fileID: 8300000, guid: 18037f2a023908f49bcfb895624bffb7, type: 3}
+  HappyEnd: {fileID: 8300000, guid: 2916a513630c3734082ea15caec69fcb, type: 3}
+  BadEnd: {fileID: 8300000, guid: d69922edffbf01748a7f632bec98f46c, type: 3}
+  BadSounds: {fileID: 8300000, guid: 14b600a5a6195184599f430bce10976f, type: 3}
+  GoodSound: {fileID: 8300000, guid: b9f42646497a8e24b8318f11dcd73e43, type: 3}
 --- !u!4 &1039796926
 Transform:
   m_ObjectHideFlags: 0
