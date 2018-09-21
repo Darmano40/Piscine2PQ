@@ -13,7 +13,6 @@ public class GameManager_Sarbacane : MonoBehaviour
     public GameObject Aura_Cible1, Aura_Cible2, Aura_Cible3, Aura_Cible4;
 
     public GameObject Angry_Cible1, Angry_Cible2, Angry_Cible3, Angry_Cible4;
-    public GameObject Calm_Cible1, Calm_Cible2, Calm_Cible3, Calm_Cible4;
     public GameObject BD_Cible1, BD_Cible2, BD_Cible3, BD_Cible4;
 
 
@@ -55,7 +54,6 @@ public class GameManager_Sarbacane : MonoBehaviour
         {
             //my_SM.Repere_Cible();
             Angry_Cible1.SetActive(true);
-            Calm_Cible1.SetActive(false);
             timeLeft_Cible1--;
             if(timeLeft_Cible1 <= 0f && !Cible1_Returned)
             {
@@ -75,7 +73,6 @@ public class GameManager_Sarbacane : MonoBehaviour
         {
             //my_SM.Repere_Cible();
             Angry_Cible2.SetActive(true);
-            Calm_Cible2.SetActive(false);
             timeLeft_Cible2--;
             if (timeLeft_Cible2 <= 0f && !Cible2_Returned)
             {
@@ -95,7 +92,6 @@ public class GameManager_Sarbacane : MonoBehaviour
         {
             //my_SM.Repere_Cible();
             Angry_Cible3.SetActive(true);
-            Calm_Cible3.SetActive(false);
             timeLeft_Cible3--;
             if (timeLeft_Cible3 <= 0f && !Cible3_Returned)
             {
@@ -116,7 +112,6 @@ public class GameManager_Sarbacane : MonoBehaviour
         {
             //my_SM.Repere_Cible();
             Angry_Cible4.SetActive(true);
-            Calm_Cible4.SetActive(false);
             timeLeft_Cible4--;
             if (timeLeft_Cible4 <= 0f && !Cible4_Returned)
             {
@@ -226,7 +221,6 @@ public class GameManager_Sarbacane : MonoBehaviour
         
         timeLeft_Cible1 = timer_cible1 * 60;
         Angry_Cible1.SetActive(false);
-        Calm_Cible1.SetActive(true);
         Number_Projectile_Cible1 = Random.Range(Minimum_Projectile_Range, Maximum_Projectile_Range);
         Debug.Log("cible1 reset: " + Number_Projectile_Cible1);
     }
@@ -236,7 +230,6 @@ public class GameManager_Sarbacane : MonoBehaviour
 
         timeLeft_Cible2 = timer_cible2 * 60;
         Angry_Cible2.SetActive(false);
-        Calm_Cible2.SetActive(true);
         Number_Projectile_Cible2 = Random.Range(Minimum_Projectile_Range, Maximum_Projectile_Range);
         Debug.Log("cible1 reset: " + Number_Projectile_Cible2);
     }
@@ -246,7 +239,6 @@ public class GameManager_Sarbacane : MonoBehaviour
 
         timeLeft_Cible3 = timer_cible3 * 60;
         Angry_Cible3.SetActive(false);
-        Calm_Cible3.SetActive(true);
         Number_Projectile_Cible3 = Random.Range(Minimum_Projectile_Range, Maximum_Projectile_Range);
         Debug.Log("cible1 reset: " + Number_Projectile_Cible3);
     }
@@ -256,7 +248,6 @@ public class GameManager_Sarbacane : MonoBehaviour
 
         timeLeft_Cible4 = timer_cible4 * 60;
         Angry_Cible4.SetActive(false);
-        Calm_Cible4.SetActive(true);
         Number_Projectile_Cible4 = Random.Range(Minimum_Projectile_Range, Maximum_Projectile_Range);
         Debug.Log("cible1 reset: " + Number_Projectile_Cible4);
     }
