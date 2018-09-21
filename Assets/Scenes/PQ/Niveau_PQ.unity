@@ -1166,7 +1166,7 @@ GameObject:
   - component: {fileID: 1352453509}
   - component: {fileID: 1352453508}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: Scores
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1260,7 +1260,7 @@ MonoBehaviour:
   leaf: {fileID: 1124690004}
   Score: {fileID: 1352453506}
   Exit_Button: {fileID: 1137308525}
-  BG_voice_intensity: {fileID: 0}
+  BG_voice_intensity: {fileID: 228028604}
   Feuille_Decrochee: {fileID: 1625719869}
   leafReset: 0
   draggedleaf: 0.2
