@@ -517,6 +517,12 @@ MonoBehaviour:
   Timer: {fileID: 813521227}
   Pause_Icon: {fileID: 83308940}
   Shoot_Button: {fileID: 1832899497}
+  BD_Cibles:
+  - {fileID: 488931597}
+  - {fileID: 143944783}
+  - {fileID: 1187349075}
+  - {fileID: 1090102196}
+  Angry_Cibles: []
   my_UIM: {fileID: 1814428374}
   my_GM: {fileID: 609689677}
   End_Buttons: {fileID: 1959239629}
@@ -1102,7 +1108,7 @@ MonoBehaviour:
   m_Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0.94509804, g: 0.46666667, b: 0.20784314, a: 0.5}
+  m_EffectColor: {r: 1, g: 1, b: 1, a: 0.5}
   m_EffectDistance: {x: 2.62, y: -1}
   m_UseGraphicAlpha: 1
 --- !u!114 &271181070
@@ -2629,10 +2635,6 @@ MonoBehaviour:
   Angry_Cible2: {fileID: 1455635465}
   Angry_Cible3: {fileID: 14268802}
   Angry_Cible4: {fileID: 201535022}
-  Calm_Cible1: {fileID: 298433619}
-  Calm_Cible2: {fileID: 476667917}
-  Calm_Cible3: {fileID: 1328934628}
-  Calm_Cible4: {fileID: 1104905093}
   BD_Cible1: {fileID: 1090102196}
   BD_Cible2: {fileID: 1187349075}
   BD_Cible3: {fileID: 143944783}
@@ -5861,7 +5863,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1959239630
 RectTransform:
   m_ObjectHideFlags: 0
