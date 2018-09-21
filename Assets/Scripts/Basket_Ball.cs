@@ -18,12 +18,16 @@ public class Basket_Ball : MonoBehaviour {
     public GameManager_Basket GameManagerBasket;
     public GameObject PausePanel;
     public Text TextTime;
+    public Text TextScore;
+    public Text TextBestScore;
+    public BasketBallTrashRespawn TrashRespawn;
 
     private bool Launched;
     private float Force;
     private float ChargingUp = 0;
     private float TimerFloat;
     private float Seconds = 60;
+    private int Score;
 
     private void Update()
     {
@@ -68,10 +72,14 @@ public class Basket_Ball : MonoBehaviour {
             transform.position = Respawn_Ball;
             GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             StartCoroutine(Waiting_Img());
-            GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionY;
+            GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
+           // GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
             Launched = false;
-
-
+            Score += 1;
+            TextScore.text = Score.ToString();
+            TextBestScore.text = Score.ToString();
+            GameManagerBasket.Redo();
+            TrashRespawn.Respawner();
         }
         else if (collision.gameObject.tag == "Basket_Ground")
         {
@@ -80,7 +88,8 @@ public class Basket_Ball : MonoBehaviour {
             transform.position = Respawn_Ball;
             GetComponent<Rigidbody2D>().velocity = Vector2.zero;
             StartCoroutine(Waiting_Img());
-            GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionY;
+            GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
+            //GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
             Launched = false;
             GameManagerBasket.Redo();
         }
