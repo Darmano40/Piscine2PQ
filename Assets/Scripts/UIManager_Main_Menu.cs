@@ -48,7 +48,7 @@ public class UIManager_Main_Menu : MonoBehaviour {
                     mainMenu.transform.GetChild(1).GetComponent<Button>().interactable = false;
                 }
 
-                if (fond.GetComponent<RectTransform>().position.y < 550)
+                if (fond.GetComponent<RectTransform>().position.y < 580)
                     fond.GetComponent<RectTransform>().transform.Translate(Vector3.up * imageSpeed * Time.deltaTime);
             }
         }
