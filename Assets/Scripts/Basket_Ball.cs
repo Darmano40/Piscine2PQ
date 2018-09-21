@@ -52,6 +52,7 @@ public class Basket_Ball : MonoBehaviour {
         TimerFloat = 180.0f; 
         Launched = false;
         Respawn_Ball = transform.position;
+        BasketScoreChecker.Singleton.ScoreTotal = 0;
     }
 
     private IEnumerator Waiting_Img()
@@ -80,6 +81,7 @@ public class Basket_Ball : MonoBehaviour {
             TextBestScore.text = Score.ToString();
             GameManagerBasket.Redo();
             TrashRespawn.Respawner();
+            BasketScoreChecker.Singleton.ScoreTotal += 1;
         }
         else if (collision.gameObject.tag == "Basket_Ground")
         {

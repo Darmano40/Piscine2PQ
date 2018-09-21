@@ -36,5 +36,6 @@ public class GameManager_Basket : MonoBehaviour {
     public void Redo()
     {
         Arrow.transform.localRotation = SpawnBase;
+
     }
 }
