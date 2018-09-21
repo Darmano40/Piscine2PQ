@@ -241,6 +241,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &431049608 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1603889821858186, guid: 159a8a6df2472cf498ef0d841f1bdfa2,
+    type: 2}
+  m_PrefabInternal: {fileID: 1381204908}
 --- !u!1 &1172674250
 GameObject:
   m_ObjectHideFlags: 0
@@ -460,6 +465,16 @@ Prefab:
       propertyPath: m_AnchoredPosition.x
       value: 1.1999512
       objectReference: {fileID: 0}
+    - target: {fileID: 223383345597554118, guid: 159a8a6df2472cf498ef0d841f1bdfa2,
+        type: 2}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114482174773776428, guid: 159a8a6df2472cf498ef0d841f1bdfa2,
+        type: 2}
+      propertyPath: TextSpashscreen
+      value: 
+      objectReference: {fileID: 431049608}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 159a8a6df2472cf498ef0d841f1bdfa2, type: 2}
   m_IsPrefabAsset: 0
