@@ -17,7 +17,7 @@ public class UI_Manager_feuille : MonoBehaviour
     public float filledLeaf = 1.2f;
 
     public float tearedLeaves = 1.0f;
-    public float totalLeavesPerRoll = 30.0f;
+    public float totalLeavesPerRoll = 18.0f;
 
 	void Start ()
     {
