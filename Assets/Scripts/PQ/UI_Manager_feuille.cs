@@ -28,7 +28,8 @@ public class UI_Manager_feuille : MonoBehaviour
 	
 	void Update ()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0)) // Commander pour défilement feuille
+        
         {
             RollOnce();
             Feuille_Decrochee.transform.Translate(0.0f, -6.0f, 0.0f);
@@ -58,8 +59,6 @@ public class UI_Manager_feuille : MonoBehaviour
         }
         UpdateLeafDisplay();
     }
-
-
 
     public void UpdateLeafDisplay()
     {
