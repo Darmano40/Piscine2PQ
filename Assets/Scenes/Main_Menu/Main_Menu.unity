@@ -632,7 +632,27 @@ Prefab:
     - target: {fileID: 224477739609300430, guid: 159a8a6df2472cf498ef0d841f1bdfa2,
         type: 2}
       propertyPath: m_LocalScale.y
-      value: 1.4890603
+      value: 2.278858
+      objectReference: {fileID: 0}
+    - target: {fileID: 224477739609300430, guid: 159a8a6df2472cf498ef0d841f1bdfa2,
+        type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.5304
+      objectReference: {fileID: 0}
+    - target: {fileID: 224477739609300430, guid: 159a8a6df2472cf498ef0d841f1bdfa2,
+        type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1.5304
+      objectReference: {fileID: 0}
+    - target: {fileID: 224875675324640328, guid: 159a8a6df2472cf498ef0d841f1bdfa2,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224596529246569128, guid: 159a8a6df2472cf498ef0d841f1bdfa2,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -710
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 159a8a6df2472cf498ef0d841f1bdfa2, type: 2}
@@ -664,14 +684,14 @@ RectTransform:
   m_GameObject: {fileID: 1656629071}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.3886247, y: 3.3886247, z: 3.3886247}
+  m_LocalScale: {x: 2.601549, y: 2.601549, z: 2.601549}
   m_Children: []
-  m_Father: {fileID: 2058561629}
-  m_RootOrder: 2
+  m_Father: {fileID: 1727706518}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8.700073, y: 698}
+  m_AnchoredPosition: {x: 8.700073, y: 61}
   m_SizeDelta: {x: 334.5, y: 161.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1656629073
@@ -710,8 +730,8 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1656629071}
   m_CullTransparentMesh: 0
---- !u!224 &2058561629 stripped
+--- !u!224 &1727706518 stripped
 RectTransform:
-  m_CorrespondingSourceObject: {fileID: 224596529246569128, guid: 159a8a6df2472cf498ef0d841f1bdfa2,
+  m_CorrespondingSourceObject: {fileID: 224985170021894116, guid: 159a8a6df2472cf498ef0d841f1bdfa2,
     type: 2}
   m_PrefabInternal: {fileID: 1381204908}

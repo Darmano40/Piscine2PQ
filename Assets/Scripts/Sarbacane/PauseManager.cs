@@ -5,7 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class PauseManager : MonoBehaviour {
 
-    public GameObject Pause_Buttons, Timer, Pause_Icon;
+    public GameObject Pause_Buttons, Timer, Pause_Icon, Shoot_Button;
+    public GameObject[] BD_Cibles;
+    public GameObject[] Angry_Cibles;
     public UI_MAnager my_UIM;
     public GameManager_Sarbacane my_GM;
     private Scene actualScene;
@@ -27,6 +29,7 @@ public class PauseManager : MonoBehaviour {
         is_Paused = true;
         Time.timeScale = 0;
         Pause_Buttons.SetActive(true);
+        Shoot_Button.SetActive(false);
     }
 
     public void Resume()
@@ -34,6 +37,7 @@ public class PauseManager : MonoBehaviour {
         is_Paused = false;
         Time.timeScale = 1;
         Pause_Buttons.SetActive(false);
+        Shoot_Button.SetActive(true);
     }
 
     public void Retry()
@@ -47,6 +51,16 @@ public class PauseManager : MonoBehaviour {
         End_Buttons.SetActive(false);
         Timer.SetActive(true);
         Pause_Icon.SetActive(true);
+        Shoot_Button.SetActive(true);
+        my_UIM.score.color = Color.black; ;
+        my_UIM.score.fontSize = 95;
+        my_UIM.scoreOutline.effectColor = Color.white;
+        for (int i = 0; i < BD_Cibles.Length; i++)
+        {
+            BD_Cibles[i].SetActive(false);
+            Angry_Cibles[i].SetActive(false);
+        }
+
     }
 
     public void Menu()

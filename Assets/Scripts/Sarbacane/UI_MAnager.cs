@@ -18,7 +18,7 @@ public class UI_MAnager : MonoBehaviour {
 
     public Image Time_Barre;  //timer sprite
 
-    public GameObject Endgame_Button, Timer_Button, Pause_Button;
+    public GameObject Endgame_Button, Timer_Button, Pause_Button, Shoot_Button;
 
     public GameManager_Sarbacane _my_GM;
 
@@ -36,7 +36,8 @@ public class UI_MAnager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        
+        if (!my_PM.is_Paused)
+        {
             timeDown();
             /*
             if (Input.anyKeyDown && t >= 0f)
@@ -46,6 +47,7 @@ public class UI_MAnager : MonoBehaviour {
             */
             timer_barre_down();
             ReSizing();
+        }
 	}
 
     void timeDown()    
@@ -165,5 +167,6 @@ public class UI_MAnager : MonoBehaviour {
         Timer_Button.SetActive(false);
         Pause_Button.SetActive(false);
         t = 0;
+        Shoot_Button.SetActive(false);
     }
 }

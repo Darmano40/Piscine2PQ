@@ -28,7 +28,7 @@ public class UI_Manager_feuille : MonoBehaviour
 	
 	void Update ()
     {
-        if (Input.GetKeyDown("z"))
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             RollOnce();
             Feuille_Decrochee.transform.Translate(0.0f, -6.5f, 0.0f);
