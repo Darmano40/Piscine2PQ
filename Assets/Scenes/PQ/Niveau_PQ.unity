@@ -899,6 +899,8 @@ MonoBehaviour:
   roll: {fileID: 0}
   leaf: {fileID: 1124690004}
   Score: {fileID: 0}
+  Exit_Button: {fileID: 1137308525}
+  BG_voice_intensity: {fileID: 0}
   Feuille_Decrochee: {fileID: 1625719869}
   draggedleaf: 0.2
   leafState: 0.2
@@ -930,6 +932,11 @@ RectTransform:
   m_AnchoredPosition: {x: -35, y: -19}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1137308525 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1381057413490676, guid: ea2ea268cf1412943ab4b9961252e3d5,
+    type: 2}
+  m_PrefabInternal: {fileID: 1027816920}
 --- !u!1 &1140508269
 GameObject:
   m_ObjectHideFlags: 0
@@ -1349,6 +1356,8 @@ MonoBehaviour:
   roll: {fileID: 0}
   leaf: {fileID: 1124690004}
   Score: {fileID: 1352453506}
+  Exit_Button: {fileID: 0}
+  BG_voice_intensity: {fileID: 0}
   Feuille_Decrochee: {fileID: 1625719869}
   draggedleaf: 0.2
   leafState: 0.2
