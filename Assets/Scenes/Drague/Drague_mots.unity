@@ -561,7 +561,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1588529990}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 967b5e5189d6b614e9217bb0e1c32b42, type: 3}
+  m_Script: {fileID: 11500000, guid: ef2e413f61df42e4aac6a9a30eb88876, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   time: 5
@@ -569,7 +569,6 @@ MonoBehaviour:
   TimerText: {fileID: 2077135825}
   SceneName: Drague_Thierry
   target: {fileID: 0}
-  FinalUI: {fileID: 0}
 --- !u!1 &2077135824
 GameObject:
   m_ObjectHideFlags: 0
