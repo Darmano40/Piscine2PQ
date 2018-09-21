@@ -516,6 +516,7 @@ MonoBehaviour:
   Pause_Buttons: {fileID: 827184601}
   Timer: {fileID: 813521227}
   Pause_Icon: {fileID: 83308940}
+  Shoot_Button: {fileID: 1832899497}
   my_UIM: {fileID: 1814428374}
   my_GM: {fileID: 609689677}
   End_Buttons: {fileID: 1959239629}
@@ -5639,9 +5640,10 @@ MonoBehaviour:
   Endgame_Button: {fileID: 1959239629}
   Timer_Button: {fileID: 813521227}
   Pause_Button: {fileID: 83308940}
+  Shoot_Button: {fileID: 1832899497}
   _my_GM: {fileID: 609689677}
   my_SM: {fileID: 358206786}
-  my_PM: {fileID: 0}
+  my_PM: {fileID: 83308945}
 --- !u!1 &1832899497
 GameObject:
   m_ObjectHideFlags: 0
