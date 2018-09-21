@@ -5,49 +5,35 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 
-public class UiManager : MonoBehaviour {
-
-    public int time;   //actual time
-    public float t;
-    public Text TimerText;    //time wrote in a text in the canvas
-    private float startTime;  //strting time
-    public string SceneName;
-
-    public Image target;
-    public GameObject FinalUI;
-    private int IsDone;
+public class UiManager : MonoBehaviour
+{
+    public GameObject Pause;
 
 
     void Start()
     {
-        IsDone = 1;
-        startTime = time;
+        
     }
-    void timeDown()
+        
+    void Update ()
     {
-        t = (startTime - Time.time) * IsDone; 
-
-        string minutes = ((int)t / 60).ToString();
-        string seconds = (t % 60).ToString("f2");
-        if (t >= 0f)
-        {
-            TimerText.text = minutes + ":" + seconds;
-
-        }
-
-        else
-        {
-            TimerText.text = "0:0.00";
-            SceneManager.LoadScene(SceneName);
-            
-        }
+        
     }
-        // Update is called once per frame
-        void Update () {
-        timeDown();
-        if (target.fillAmount == 0 || target.fillAmount == 1)
-        {
-            IsDone = 0;
-        }
+
+    public void PauseGame()
+    {
+        Pause.SetActive(true);
+    }
+
+    public void Quit()
+    {
+        SceneManager.LoadScene("Main_Menu");
+        
+    }
+
+    public void Retry()
+    {
+        SceneManager.LoadScene("Drague_Thierry");
+
     }
 }
