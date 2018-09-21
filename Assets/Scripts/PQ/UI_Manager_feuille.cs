@@ -9,6 +9,8 @@ public class UI_Manager_feuille : MonoBehaviour
     public Image roll;
     public Image leaf;
     public GameObject Score;
+    public GameObject Exit_Button;
+    public GameObject BG_voice_intensity;
 
     public GameObject Feuille_Decrochee;
 
@@ -46,6 +48,8 @@ public class UI_Manager_feuille : MonoBehaviour
             if (tearedLeaves == totalLeavesPerRoll)
             {
                 Score.SetActive(true);
+                Exit_Button.SetActive(false);
+                BG_voice_intensity.SetActive(false);
             }
         }
         UpdateLeafDisplay();
